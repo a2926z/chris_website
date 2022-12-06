@@ -1,2 +1,2 @@
 # chris_website
-My personal blog
+# My personal blog
