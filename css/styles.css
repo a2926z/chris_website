@@ -19,6 +19,7 @@ h3 {
   color: #11999E;
   font-size: 1.17rem;
   font-weight: bold;
+  font-family: 'EB Garamond', serif;
 }
 
 hr {
@@ -201,6 +202,74 @@ hr {
   font-family: 'EB Garamond', serif;
 }
 
+.outside {
+  background: #e4f9f5;
+  position: fixed;
+  /* width: 100%; */
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.post-body {
+  margin-top: 90px;
+}
+
+.post-title-header {
+  display: flex;
+  width: 45%;
+  margin: 8% auto 1%;
+  border-left: 4px solid #11999E;
+}
+
+.post-title {
+  width: 95%;
+  margin: auto;
+  text-align: left;
+  padding: 1% 2% 1%;
+}
+
+.post-h3 {
+  width: 40%;
+  margin: auto;
+  text-align: left;
+  /* padding: 1% 0 1%; */
+  font-size: 26px;
+  font-weight: normal;
+  margin: auto;
+}
+
+.post-text {
+  margin: 1% auto;
+  width: 40%;
+  line-height: 34px;
+}
+
+.post-img-top {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 45%;
+  padding: 1% 0;
+}
+
+.post-img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+  padding: 1%;
+}
+
+.post-bottom-container {
+  margin-top: 80px;
+}
+
+.youtube-video {
+  display: block;  
+  margin: auto;
+  
+}
 
 
 
@@ -290,5 +359,40 @@ hr {
 
   .name {
     font-size: 1.1rem;
+  }
+
+  .post-title-header {
+    margin-top: 25%;
+    width: 75%;
+  }
+
+  .post-title {
+    padding: 4% 0;
+    width: 90%;
+  }
+
+  .post-h3 {
+    width: 70%;
+  }
+
+  .post-text {
+    width: 75%;
+    margin-top: 4%;
+    margin-bottom: 4%;
+  }
+  
+  .post-img-top {
+    width: 75%;
+    padding-top: 6%;
+  }
+
+  .post-img {
+    width: 75%;
+    padding: 2% 0;
+  }
+
+  .youtube-video {
+    width: 373px;
+    height: 210px;
   }
 }
