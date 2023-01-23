@@ -280,9 +280,27 @@ hr {
 }
 
 .youtube-video {
-  display: block;  
+  display: block;
   margin: 2% auto;
+
+}
+
+.row {
+  margin-top: 10%;
+  display: flex;
+  justify-content: space-evenly;
   
+}
+
+.flex-col {
+  flex-basis: 35%;
+  
+}
+
+.flex-col img {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
 }
 
 
@@ -332,10 +350,10 @@ hr {
   }
 
   .skill-row2 {
-    text-align:justify;
+    text-align: justify;
     width: 95%;
     padding: 2%;
-}
+  }
 
   .skill-img1 {
     width: 30%;
@@ -350,7 +368,7 @@ hr {
     text-align: left;
   }
 
-  .web-dev-desc{
+  .web-dev-desc {
     text-align: left;
   }
 
@@ -398,7 +416,7 @@ hr {
     margin-top: 1%;
     margin-bottom: 1%;
   }
-  
+
   .post-img-top {
     width: 85%;
     padding-top: 6%;
@@ -413,5 +431,11 @@ hr {
   .youtube-video {
     width: 373px;
     height: 210px;
+  }
+
+  .row {
+    margin-top: 25%;
+    flex-direction: column;
+    padding: 5%;
   }
 }
