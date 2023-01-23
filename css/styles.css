@@ -11,8 +11,9 @@ h1 {
 
 h2 {
   color: #11999E;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   font-weight: normal;
+  font-family: 'EB Garamond', serif;
 }
 
 h3 {
@@ -20,6 +21,11 @@ h3 {
   font-size: 1.17rem;
   font-weight: bold;
   font-family: 'EB Garamond', serif;
+}
+
+a {
+  text-decoration: none;
+  color: #11999e;
 }
 
 hr {
@@ -229,18 +235,26 @@ hr {
   padding: 1% 2% 1%;
 }
 
-.post-h3 {
-  width: 40%;
+.post-h2 {
+  width: 37%;
   margin: auto;
   text-align: left;
-  /* padding: 1% 0 1%; */
-  font-size: 26px;
+  font-size: 24px;
   font-weight: normal;
+  padding: 1% 0;
+}
+
+.post-h3 {
+  width: 37%;
   margin: auto;
+  text-align: left;
+  font-size: 22px;
+  font-weight: normal;
+  padding: 1% 0;
 }
 
 .post-text {
-  margin: 1% auto;
+  margin: auto;
   width: 40%;
   line-height: 34px;
 }
@@ -267,7 +281,7 @@ hr {
 
 .youtube-video {
   display: block;  
-  margin: auto;
+  margin: 2% auto;
   
 }
 
@@ -362,32 +376,37 @@ hr {
   }
 
   .post-title-header {
-    margin-top: 25%;
-    width: 75%;
+    margin-top: 29%;
+    width: 80%;
   }
 
   .post-title {
-    padding: 4% 0;
+    padding: 3% 0;
     width: 90%;
   }
 
+  .post-h2 {
+    width: 80%;
+  }
+
   .post-h3 {
-    width: 70%;
+    width: 80%;
   }
 
   .post-text {
-    width: 75%;
-    margin-top: 4%;
-    margin-bottom: 4%;
+    width: 85%;
+    margin-top: 1%;
+    margin-bottom: 1%;
   }
   
   .post-img-top {
-    width: 75%;
+    width: 85%;
     padding-top: 6%;
+    padding-bottom: 4%;
   }
 
   .post-img {
-    width: 75%;
+    width: 85%;
     padding: 2% 0;
   }
 
