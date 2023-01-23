@@ -289,7 +289,7 @@ hr {
   margin-top: 10%;
   display: flex;
   justify-content: space-evenly;
-  flex-direction: column;
+  flex-direction: row;
 }
 
 .flex-col {
