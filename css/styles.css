@@ -285,7 +285,7 @@ hr {
 
 }
 
-.row {
+.flex-row {
   margin-top: 10%;
   display: flex;
   justify-content: space-evenly;
@@ -326,7 +326,7 @@ hr {
   }
 
   .a-programmer {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
   }
 
   .profile {
@@ -433,7 +433,7 @@ hr {
     height: 210px;
   }
 
-  .row {
+  .flex-row {
     margin-top: 25%;
     flex-direction: column;
     padding: 5%;
