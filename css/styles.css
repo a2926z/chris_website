@@ -37,6 +37,10 @@ hr {
   margin: auto;
 }
 
+img {
+  border-radius: 4px;
+}
+
 /* NAVBAR SECTION */
 
 .navbar {
@@ -544,5 +548,11 @@ hr {
   .flex-col-1 img,
   .flex-col-2 img {
     min-height: 232px;
+    
+  }
+
+  .flex-col-1,
+  .flex-col-2 {
+    margin: 2% 0;
   }
 }
