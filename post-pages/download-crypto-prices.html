@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=EB+Garamond&family=IBM+Plex+Sans&family=Source+Sans+Pro&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS stylesheets -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/styles.css">
+
+    <!-- Bootstrap scripts -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+
+    <link rel="icon" href="favicon3.png">
+</head>
+
+<body class="post-body">
+    <section class="outside">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg ps-4">
+                <a class="navbar-brand" href="../index.html">
+                    <img class="little-profile-man img-fluid" src="../images/little-profile-man4.png" alt="">
+                </a>
+
+                <button class="navbar-toggler me-4" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+                    <ul class="up-menu navbar-nav ms-auto pe-5">
+                        <li class="nav-item">
+                            <a class="nav-link blog-link" href="../blog.html">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Τζόκερ</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Crypto</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </section>
+
+    <div class="post">
+        <div class="post-title-header">
+            <h1 class="post-title">Πως να κατεβάσεις τιμές κρυπτονομισμάτων και να τις περάσεις σε ένα αρχείο excel
+            </h1>
+        </div>
+
+        <img src="../post-images/coinmarketcap1.jpeg" class="post-img-top">
+
+        <h2 class="post-h2">
+            Σε αυτό το post θα δεις βήμα-βήμα πως μπορείς να κατεβάσεις τις τρέχουσες τιμές οποιουδήποτε
+            κρυπτονομίσματος θέλεις και να τις αποθηκεύσεις στον υπολογιστή σου, χρησιμοποιώντας λίγες γραμμές Python.
+        </h2>
+
+
+        <p class="post-text">
+            <b>Αν ασχολείσαι</b> με τα κρυπτονομίσματα (cryptocurrencies) και ιδιαίτερα αν επέλεξες να αγοράσεις μερικά
+            απ'
+            αυτά, τότε πολύ πιθανόν να σε ενδιαφέρει το παρόν άρθρο πάρα πολύ. Ένα χρηματιστηριακό ρητό λέει: "Μην
+            αγνοείς ποτέ την μόδα, μπορεί να σε κάνει πλούσιο και ενίοτε πάμπλουτο". Έτσι και κάποιοι απο εμάς επιλέξαμε
+            να μην την αγνοήσουμε και ότι γίνει.
+        </p>
+
+        <p class="post-text">
+            <b>Προσωπικά</b> επέλεξα να ασχοληθώ ερασιτεχνικά με τον χώρο των κρύπτο και να αγοράσω μερικά. (Mε χρήματα
+            -ΠΑΝΤΑ-
+            που και να τα χάσω χ@στηκα***). Οπότε πρωταρχικός μου στόχος είναι να μπορώ να βλέπω άμεσα το κεφάλαιο μου
+            ανά πάσα στιγμή.
+        </p>
+        <br>
+        <p class="post-text">
+            <b>Για να</b> το καταφέρω αυτό άνοιξα ένα excelό-φυλλο και πέρασα την ποσότητα απο κάθε νόμισμα που είχα.
+            Μου
+            έλειπε η τιμή και τσουπ, έτοιμο το κεφάλαιο.
+        </p>
+
+        <p class="post-text">
+            <b>Ευτυχώς</b> για τις τιμές των κρύπτο έχει φροντίσει ένας ιστότοπος, που αν ασχολείσαι με τα κρύπτο
+            σίγουρα είναι
+            καλός σου φίλος, ο coinmarketcap. Έχει ετοιμάσει μια API και εντελώς δωρεάν στην free έκδοση, σου παρέχει
+            τις τρέχουσες τιμών εκατοντάδων κρυπτονομισμάτων. Το μόνο που έχεις να κάνεις είναι να βγάλεις ένα κλειδί
+            (key) και να γράψεις λίγο κώδικα που είναι έτοιμος σε αυτό το άρθρο.
+        </p>
+        <br>
+        <p class="post-text">
+            <b>Πάμε</b> πρώτα για το κλειδί. Πρώτα πηγαίνεις <a href="https://coinmarketcap.com/api/" target="_blank">
+                <b>εδώ</b> </a> και αφού κάνεις έναν λογαριασμό πατάς το κουμπί 'GET YOUR API
+            KEY NOW". Αφού εκδοθεί το κλειδάκι σου το αντιγράφεις σε ένα txt και προχωράς.
+        </p>
+
+        <img src="../post-images/coinmarketcap2.jpg" class="post-img" alt="">
+
+        <p class="post-text">
+            <b>Σχετικά</b> με τον κώδικα τώρα. Τρεις είναι οι βασικές πληροφορίες που καταχωρείς για να φτάσεις σε κάθε
+            τιμή:
+
+        </p>
+        <p class="post-text">
+            <b>1. headers.</b> Εδώ βάζεις το κλειδί που μόλις έβγαλες, μαζί με το φορμάτ του αρχείου που στην περίπτωση
+            μας
+            είναι αρχείο json.
+        </p>
+        <p class="post-text">
+            <b>2. params.</b> Εδώ καταχωρείς τα σύμβολα που σε ενδιαφέρουν και το νόμισμα του ζευγαριού. Επειδή έχω
+            κάνει όλες
+            τις αγορές μου σε EUR, το επιλέγω. Όσο για τα σύμβολα, πηγαίνεις σε <a
+                href="https://coinmarketcap.com/all/views/all/" target="_blank"><b>αυτή</b></a> την διεύθυνση και
+            επιλέγεις αυτά
+            που παρακολουθείς.
+        </p>
+        <p class="post-text">
+            <b>3. url.</b> Αυτή είναι στάνταρ, είναι η διεύθυνση της API <br>
+            'https://pro-api.coinmarketcap.com/v1/cryptocurrency/quotes/latest'
+        </p>
+        <br>
+
+        <p class="post-text">
+            <b>Το request</b> που κάνεις επιστρέφει ένα αρχείο json της μορφής:
+        </p>
+
+        <pre class="post-text">
+            <code>
+                {'data': {'BTC': {'circulating_supply': 18867481,
+                  'cmc_rank': 1,
+                  'date_added': '2013-04-28T00:00:00.000Z',
+                  'id': 1,
+                  'is_active': 1,
+                  'is_fiat': 0,
+                  'last_updated': '2021-11-08T15:27:02.000Z',
+                  'max_supply': 21000000,
+                  'name': 'Bitcoin',
+                  'num_market_pairs': 8297,
+                  'platform': None,
+                  'quote': {'EUR': {'fully_diluted_market_cap': 1189612564080.0137,
+                                    'last_updated': '2021-11-08T15:27:34.000Z',
+                                    'market_cap': 1068809164292.4241,
+                                    'market_cap_dominance': 43.2794,
+                                    'percent_change_1h': 0.0415769,
+                                    'percent_change_24h': 5.45204024,
+                                    'percent_change_30d': 19.07865819,
+                                    'percent_change_60d': 40.03057059,
+                                    'percent_change_7d': 5.11858583,
+                                    'percent_change_90d': 45.00142545,
+                                    'price': 56648.217337143426,
+                                    'volume_24h': 30440975711.61554,
+                                    'volume_change_24h': 40.8923}},
+                  'slug': 'bitcoin',
+                  'symbol': 'BTC',
+            </code>
+        </pre>
+
+
+
+
+
+        <p class="post-text">
+            <b>οπότε</b> πρέπει να φτάσεις στην τιμή του κλειδιού που λέγεται price και να πάρεις το value του, όπως
+            γίνεται σε
+            κάθε λεξικό.
+        </p>
+
+        <p class="post-text">
+            <b>Φυσικά</b> μπορείς να πάρεις οποιαδήποτε χρήσιμη πληροφορία, όπως την μεταβολή 24 ωρών ή 90 ημερών κλπ..
+        </p>
+        <br>
+
+        <p class="post-text">
+            <b>Παρακάτω</b> παραθέτω ολόκληρο τον κώδικα. Πρέπει να αλλάξει το κλειδί της API και η τοποθεσία που θέλεις
+            να
+            αποθηκευτεί το αρχείο excel. Στο συγκεκριμένο παράδειγμα εκτός απο την τρέχουσα τιμή, παίρνω και την 24ωρη
+            μεταβολή για τα 7+1 κρύπτο που παρακολουθώ.
+        </p>
+        <br>
+
+        <p class="post-text">
+            <b>*** Το παρόν δεν αποτελεί επενδυτική συμβουλή</b> , για επενδύσεις πρέπει να ακολουθείτε τις οδηγίες μόνο
+            πιστοποιημένων για αυτό ατόμων.
+        </p>
+
+        <pre class="code post-text">
+            <code>
+                import requests
+                from datetime import datetime
+                from openpyxl import load_workbook
+                import pprint
+                
+                # Get data
+                
+                headers = {
+                    'X-CMC_PRO_API_KEY': 'YOUR API KEY',
+                    'Accepts': 'application/json'
+                }
+                
+                params = {
+                    'symbol': 'doge,matic,xlm,vet,trx,shib,hot,btc',
+                    'convert': 'EUR'
+                }
+                
+                url = 'https://pro-api.coinmarketcap.com/v1/cryptocurrency/quotes/latest'
+                
+                prices = requests.get(url, params=params, headers=headers).json()
+                # pprint.pprint(prices) # εδώ μπορούμε να δούμε τι τυπώνει το request
+                
+                doge = prices['data']['DOGE']['quote']['EUR']['price']
+                matic = prices['data']['MATIC']['quote']['EUR']['price']
+                xlm = prices['data']['XLM']['quote']['EUR']['price']
+                vet = prices['data']['VET']['quote']['EUR']['price']
+                trx = prices['data']['TRX']['quote']['EUR']['price']
+                shib = prices['data']['SHIB']['quote']['EUR']['price']
+                hot = prices['data']['HOT']['quote']['EUR']['price']
+                
+                doge_perc_change = prices['data']['DOGE']['quote']['EUR']['percent_change_24h']
+                matic_perc_change = prices['data']['MATIC']['quote']['EUR']['percent_change_24h']
+                xlm_perc_change = prices['data']['XLM']['quote']['EUR']['percent_change_24h']
+                vet_perc_change = prices['data']['VET']['quote']['EUR']['percent_change_24h']
+                trx_perc_change = prices['data']['TRX']['quote']['EUR']['percent_change_24h']
+                shib_perc_change = prices['data']['SHIB']['quote']['EUR']['percent_change_24h']
+                hot_perc_change = prices['data']['HOT']['quote']['EUR']['percent_change_24h']
+                btc_perc_change = prices['data']['BTC']['quote']['EUR']['percent_change_24h']
+                
+                # Write to excel sheet
+                
+                book = load_workbook(r'YOUR EXCEL DESTINATION ON DISK') # π.χ 'E:\My_files' κλπ
+                sheet = book.active
+                
+                sheet['c2'] = trx
+                sheet['c3'] = xlm
+                sheet['c4'] = hot
+                sheet['c5'] = vet
+                sheet['c6'] = shib
+                sheet['c7'] = matic
+                sheet['c8'] = doge
+                
+                sheet['d2'] = trx_perc_change/100
+                sheet['d3'] = xlm_perc_change/100
+                sheet['d4'] = hot_perc_change/100
+                sheet['d5'] = vet_perc_change/100
+                sheet['d6'] = shib_perc_change/100
+                sheet['d7'] = matic_perc_change/100
+                sheet['d8'] = doge_perc_change/100
+                sheet['d10'] = btc_perc_change/100
+                
+                now = datetime.now()
+                time = now.strftime("%H:%M:%S")
+                day = now.strftime('%d/%m/%Y')
+                sheet['b15'] = time
+                sheet['b17'] = day
+                
+                book.save(r'YOUR EXCEL DESTINATION ON DISK')
+                book.close()
+                print('\nBook was successfully updated!..')
+            </code>
+        </pre>
+
+
+
+
+
+
+
+
+
+    </div>
+
+
+    <section id="bottom-container" class="post-bottom-container">
+        <div class="bottom-container">
+            <a class="footer-link" href="https://twitter.com/chrismaxi2" target="_blank">Twitter</a>
+            <a class="footer-link" href="https://mypythonjourney-ingreek.blogspot.com/" target="_blank">Website</a>
+            <p class="name">© 2022 Chris Fyt.</p>
+        </div>
+    </section>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
