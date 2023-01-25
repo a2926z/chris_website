@@ -296,22 +296,24 @@ hr {
   justify-content: space-evenly;
 }
 
-.flex-col {
+.flex-col-1 {
   flex-basis: 40%;
   transition: 0.15s;
   position: relative;
 }
 
-.flex-col:hover {
+.flex-col-1:hover,
+.flex-col-2:hover {
   opacity: 85%;
   box-shadow: 0 0 20px rgb(0 0 0 / 0.5);
 }
 
-.flex-col:active {
+.flex-col-1:active,
+.flex-col-2:active {
   opacity: 70%;
 }
 
-.flex-col img {
+.flex-col-1 img {
   width: 100%;
   height: 100%;
   border-radius: 8px;
@@ -319,16 +321,56 @@ hr {
   object-position:center;
 }
 
-.main-page-post-title {
+.main-page-post-title-1 {
   position: absolute;
   bottom: 0;
-  left: 15px;
+  left: 25px;
   font-size: 32px;
   color: white;
   font-family: 'EB Garamond', serif;
-  width: 75%;
+  width: 97%;
   font-weight: 600;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
   /* background: linear-gradient(to top, rgba(0, 0, 0, 0.85), transparent); */
+}
+
+.flex-row-2 {
+  margin-top: 6%;
+  margin-bottom: 10%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.flex-col-2 {
+  flex-basis: 28%;
+  transition: 0.15s;
+}
+
+.flex-col-2 img {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+  object-position:center;
+}
+
+.flex-col-2 .right-centered {
+  object-position: left;
+}
+
+.main-page-post-title-2 {
+  font-size: 23px;
+  color: black;
+  font-family: 'EB Garamond', serif;
+  width: 75%;
+  justify-content: center;
+  font-weight: 400;
+  /* background: linear-gradient(to top, rgba(0, 0, 0, 0.85), transparent); */
+}
+
+.title-div {
+  display: flex;
+  justify-content: center;
 }
 
 
@@ -469,7 +511,9 @@ hr {
     padding: 5%;
   }
 
-  .main-page-post-title {
+  .main-page-post-title-1,
+  .main-page-post-title-2 {
+    text-shadow: none;
     position: relative;
     font-size: 20px;
     color: black;
@@ -477,5 +521,17 @@ hr {
     border-radius: 4px;
     padding-top: 1%;
     font-weight: 500;
+    left: 5px;
+    font-family: 'EB Garamond', serif;
+  }
+
+  .title-div {
+    display: block;
+  }
+
+  .flex-row-2 {
+    margin-top: -5%;
+    flex-direction: column;
+    padding: 0 5%;
   }
 }
