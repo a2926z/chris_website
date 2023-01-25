@@ -318,7 +318,7 @@ hr {
   height: 100%;
   border-radius: 8px;
   object-fit: cover;
-  object-position:center;
+  object-position: center;
 }
 
 .main-page-post-title-1 {
@@ -351,7 +351,7 @@ hr {
   height: 100%;
   border-radius: 8px;
   object-fit: cover;
-  object-position:center;
+  object-position: center;
 }
 
 .flex-col-2 .right-centered {
@@ -539,5 +539,10 @@ hr {
     margin-top: -5%;
     flex-direction: column;
     padding: 0 5%;
+  }
+
+  .flex-col-1 img,
+  .flex-col-2 img {
+    min-height: 232px;
   }
 }
