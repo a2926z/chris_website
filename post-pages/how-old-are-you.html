@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Πόσα λεπτά πέρασαν απο την γέννηση μου?</title>
+
+    <!-- Meta description -->
+    <meta name="description" content="Σε αυτή τη σελίδα θα βρείς τον κώδικα για τον ακριβή υπολογισμό της ηλικίας ενός ανθρώπου, πόσους μήνες, 
+        εβδομάδες, ημέρες, ώρες ή λεπτά είναι ζωντανός.">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=EB+Garamond&family=IBM+Plex+Sans&family=Source+Sans+Pro&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS stylesheets -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/styles.css">
+
+    <!-- Bootstrap scripts -->
+    <!-- jQuery was identified as thread from lighthouse so was muted and everything so far works fine. Activated again as now Chrome 
+    displays an error -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+
+    <link rel="icon" href="../favicon33.webp">
+
+    <!-- script for navbar -->
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+
+<body class="post-body">
+
+    <!--Navigation bar-->
+    <div id="nav-placeholder">
+
+    </div>
+
+    <script>
+        $(function () {
+            $("#nav-placeholder").load("../nav.html");
+        });
+    </script>
+    <!--end of Navigation bar-->
+
+    <div class="post">
+        <div class="post-title-header">
+            <h1 class="post-title">Πόσα λεπτά πέρασαν απο την γέννηση μου?
+            </h1>
+        </div>
+
+        <img src="../post-images/how-old-are-you1.webp" class="post-img-top">
+
+        <h2 class="post-h2">
+            Σε αυτή τη σελίδα θα βρείς τον κώδικα για τον ακριβή υπολογισμό της ηλικίας ενός ανθρώπου, πόσους μήνες,
+            εβδομάδες, ημέρες, ώρες ή λεπτά πέρασαν απο την ημερομηνία γέννησης του.
+        </h2>
+
+        <p class="post-text">
+            <b>Πόσα λεπτά</b> πέρασαν απο την γέννηση μου? Πόσες εβδομάδες ή μέρες υπάρχω? Με αυτό το απλό σκριπτάκι
+            απαντώνται
+            όλα.
+            Βάζεις ημερομηνία, μήνα και έτος γέννησης και το daytime στα λέει όλα.
+        </p>
+        <br>
+
+        <p class="post-text">
+            <b>Για παράδειγμα</b> κάποιος που γεννήθηκε στις 1 Μαΐου του 1980 έχει ζήσει 14.904 ημέρες ή 21.461.760
+            λεπτά. Αν
+            δεν είναι αυτό ενδιαφέρουσα πληροφορία, τότε τι είναι?
+        </p>
+        <img src="../post-images/how-old-are-you3.webp" class="post-img" alt="">
+
+
+        <p class="post-text">
+            <b>Στο κομμάτι</b> του κώδικα τώρα, πέρα απο την χρήση της <b>daytime</b>  που είναι σχετικά απλή, προσπάθησα να
+            αποκλείσω
+            όλα τα πιθανά λάθη που θα μπορούσαν να καταχωρηθούν ώστε να μην κρασάρει το πρόγραμμα.
+        </p>
+        <br>
+
+        <p class="post-text">
+            <b>Για παράδειγμα</b> αν κάποιος βάλει κείμενο ή σύμβολο αντί για αριθμό, η python θα έβγαζε error και το
+            παράθυρο
+            θα έκλεινε. Τώρα αν κάποιος βάλει ότι γεννήθηκε στις 32 του μηνός, θα του βγάλει ένα ευγενικό μήνυμα λάθους
+            ώστε να καταχωρήσει την κανονική ημερομηνία.
+        </p>
+        <br>
+
+        <p class="post-text">
+            <b>Αυτό γίνεται</b> με while loops σε συνδυασμό με try except για συγκεκριμένα λάθη που μπορούν να
+            προκύψουν. Και
+            είναι χρέος ενός καλού προγραμματιστή να αποκλείει μελλοντικές λανθασμένες καταχωρήσεις απο users και να
+            δυναμώνει το πρόγραμμα. Γιατί τίποτα χειρότερο απο κάτι που δεν δουλεύει σωστά ή κρασάρει όλη την ώρα..
+        </p>
+
+        <img src="../post-images/how-old-are-you2.webp" class="post-img" alt="">
+
+        <p class="post-text">
+            <b>Ακολουθεί</b> ο κώδικας όλου του προγράμματος. Όποιος ενδιαφέρεται μπορεί να κατεβάσει το exe <a
+                href="https://1drv.ms/u/s!ApZtI3LNpx79gQNjyGQpKuaFBx6z?e=c6NYHo" target="_blank"><b>εδώ</b></a>. Το
+            exe <b>δεν είναι ιός</b> και όπως έγραψα σε άλλο ποστ, είναι ελεγμένο στο <a
+                href="https://www.virustotal.com/gui/home/upload" target="_blank"><b>virus total</b></a> αλλά ενδέχεται
+            η Google να το
+            εμφανίσει σαν uncommon download.
+        </p>
+
+
+        <pre class="post-text">
+            <code>
+                import datetime
+
+                def how_old():
+                    currentDate = datetime.datetime.now()
+                
+                    year_born = input("Enter the year you were born in the form yyyy (for example 1976):  ")
+                    while True:
+                        try:
+                            if int(year_born) not in range(1, 11111111):
+                                year_born = input("Enter a valid year in the form yyyy:  ")
+                            elif len(year_born) != 4:
+                                year_born = input("Enter at least 4 digits in the form yyyy: ")
+                            else:
+                                break
+                        except ValueError:
+                            print("Only integers are allowed! ")
+                            year_born = input("Enter the year you were born in the form yyyy (for example 1976):  ")
+                
+                    month_born = input("Enter the month you were born in the form mm (for example 05 for May):  ")
+                    while True:
+                        try:
+                            if int(month_born) not in range(1, 13):
+                                month_born = input("Enter a valid month in the form mm:  ")
+                            else:
+                                break
+                        except ValueError:
+                            print("Only integers are allowed! ")
+                            month_born = input("Enter the month you were born in the form mm (for example 05 for May):  ")
+                
+                    date_born = input("Enter the date you were born in the form dd (for example 17):  ")
+                    while True:
+                        try:
+                            if int(date_born) not in range(1, 32):
+                                date_born = input("Enter a valid date in the form dd:  ")
+                            else:
+                                break
+                        except ValueError:
+                            print("Only integers are allowed! ")
+                            date_born = input("Enter the date you were born in the form dd:  ")
+                
+                    tot_date2 = {date_born + "/" + month_born + "/" + year_born}
+                    tot_date = ''.join(tot_date2)
+                    deadlineDate = datetime.datetime.strptime(tot_date, '%d/%m/%Y')
+                
+                    print (deadlineDate)
+                    daysLeft = currentDate - deadlineDate
+                    #print(daysLeft)
+                
+                    years = ((daysLeft.total_seconds())/(365.242*24*3600))
+                    yearsInt=int(years)
+                
+                    months=(years-yearsInt)*12
+                    monthsInt=int(months)
+                
+                    days=(months-monthsInt)*(365.242/12)
+                    daysInt=int(days)
+                
+                    hours = (days-daysInt)*24
+                    hoursInt=int(hours)
+                
+                    minutes = (hours-hoursInt)*60
+                    minutesInt=int(minutes)
+                
+                    seconds = (minutes-minutesInt)*60
+                    secondsInt =int(seconds)
+                
+                    num_days = currentDate - deadlineDate
+                
+                    print('\nYou are {0:d} years, {1:d} months, {2:d} days, {3:d} hours, '
+                          '{4:d} minutes, {5:d} seconds old.'.format(yearsInt,monthsInt,daysInt,hoursInt,minutesInt,secondsInt))
+                
+                    num_months = (currentDate.year - deadlineDate.year) * 12 + (currentDate.month - deadlineDate.month)
+                    print("\nYou are alive for: \n" + "---" + str(num_months) + " months or ")
+                
+                    num_weeks = num_days.days / 7
+                    num_weeks = int(num_weeks)
+                    print("---" + format((num_weeks), "0,d") + " weeks or")
+                
+                    num_days = currentDate - deadlineDate
+                    print("---" + format((num_days.days), "0,d") + " days or ")
+                
+                    num_hours = int(num_days.days) * 24
+                    print("---" + format((num_hours), "0,d") + " hours or")
+                
+                    num_minutes = num_hours * 60
+                    print("---" + format((num_minutes), "0,d") + " minutes")
+                
+                how_old()
+                
+                while True:
+                    play_or_quit = input("\npress 'p' to enter again or 'q' to exit: ")
+                    if play_or_quit.lower() == "p":
+                        how_old()
+                    else:
+                        if play_or_quit.lower() == "q":
+                            exit(0)
+            </code>
+        </pre>
+
+
+
+    </div>
+
+    <!--Footer-->
+    <div id="footer-placeholder">
+
+    </div>
+
+    <script>
+        $(function () {
+            $("#footer-placeholder").load("../footer.html");
+        });
+    </script>
+    <!--end of Footer-->
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
