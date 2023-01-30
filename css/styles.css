@@ -321,7 +321,7 @@ img {
   width: 100%;
   height: 100%;
   border-radius: 8px;
-  object-fit: cover;
+  object-fit: fill;
   object-position: center;
 }
 
@@ -332,7 +332,8 @@ img {
   font-size: 32px;
   color: white;
   font-family: 'EB Garamond', serif;
-  width: 97%;
+  /* changed the value below from 97% to 60%, regards the title of the 2 main posts */
+  width: 60%;
   font-weight: 600;
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
   /* background: linear-gradient(to top, rgba(0, 0, 0, 0.85), transparent); */
@@ -376,13 +377,6 @@ img {
   display: flex;
   justify-content: center;
 }
-
-/* .code {
-  display: block;
-  margin: auto;
-  
-} */
-
 
 
 
