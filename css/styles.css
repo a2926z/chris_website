@@ -283,7 +283,7 @@ img {
 }
 
 .post-bottom-container {
-  margin-top: 80px;
+  margin-top: 160px;
 }
 
 .youtube-video {
@@ -341,7 +341,7 @@ img {
 
 .flex-row-2 {
   margin-top: 6%;
-  margin-bottom: 10%;
+  margin-bottom: 6%;
   display: flex;
   justify-content: space-evenly;
 }
@@ -504,6 +504,10 @@ img {
     padding: 2% 0;
   }
 
+  .post-bottom-container {
+    margin-top: 40px;
+  }
+
   .youtube-video {
     width: 373px;
     height: 210px;
@@ -534,7 +538,7 @@ img {
   }
 
   .flex-row-2 {
-    margin-top: -5%;
+    margin-top: -6%;
     flex-direction: column;
     padding: 0 5%;
   }
