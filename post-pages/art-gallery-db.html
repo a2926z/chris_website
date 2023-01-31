@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Art gallery database</title>
+
+    <!-- Meta description -->
+    <meta name="description" content="Σε αυτή τη σελίδα θα δεις πως μπορείς να φτιάξεις μια βάση δεδομένων, με δυνατότητα εκατομμυρίων εγγραφών, εύκολα
+         και γρήγορα στην Python.">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=EB+Garamond&family=IBM+Plex+Sans&family=Source+Sans+Pro&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS stylesheets -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/styles.css">
+
+    <!-- Bootstrap scripts -->
+    <!-- jQuery was identified as thread from lighthouse so was muted and everything so far works fine. Activated again as now Chrome 
+    displays an error -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+
+    <link rel="icon" href="../favicon33.webp">
+
+    <!-- script for navbar -->
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+
+<body class="post-body">
+
+    <!--Navigation bar-->
+    <div id="nav-placeholder">
+
+    </div>
+
+    <script>
+        $(function () {
+            $("#nav-placeholder").load("../nav.html");
+        });
+    </script>
+    <!--end of Navigation bar-->
+
+    <div class="post">
+        <div class="post-title-header">
+            <h1 class="post-title">Art gallery database. Πόσο δύσκολο είναι να φτιάξεις μια βάση δεδομένων ?
+            </h1>
+        </div>
+
+        <img src="../post-images/art-gallery-database1.webp" class="post-img-top">
+
+        <h2 class="post-h2">
+            Σε αυτό το πόστ θα βρείς τον κώδικα για τη δημιουργία μιας βάσης δεδομένων, με δυνατότητα εκατομμυρίων
+            εγγραφών,
+            εύκολα και γρήγορα στην Python.
+        </h2>
+        <br>
+
+        <p class="post-text">
+            <b>Και φτάνω</b> στην 150ή και τελευταία άσκηση, του εκπληκτικού βιβλίου <a href="https://www.amazon.co.uk/Python-Example-Nichola-Lacey/dp/1108716830/ref=sr_1_5?crid=1DL6LTZIYZ3NN&dchild
+                =1&keywords=python+by+example&qid=1614015793&sprefix=python+by%2Caps%2C162&sr=8-5"
+                target="_blank"><b>"Python by Example"</b></a>
+            της Nichola Lacey.
+            Εκεί ζητείται να φτιαχτεί μια πλήρως λειτουργική βάση δεδομένων, μιας υποθετικής γκαλερί, όπου σε ένα
+            γραφικό περιβάλλον θα μπορείς να κάνεις αναζήτηση με βάση 4 διαφορετικά κριτήρια (καλλιτέχνης, μέσο
+            ζωγραφικής, τιμή μεγαλύτερη ή μικρότερη από..) και θα μπορείς να προσθαφαιρείς έργα τέχνης ή στοιχεία
+            επικοινωνίας
+            καλλιτεχνών.
+        </p>
+        <br>
+
+        <p class="post-text">
+            <b>Χρήσιμοποιήθηκε</b> η Tkinter για το γραφικό περιβάλλον, η SQLite για την βάση δεδομένων και 297 γραμμές
+            κώδικα
+            στην Python 3. Είναι το πρώτο project που φτιάχνεται κατά παραγγελία, έστω και σαν άσκηση ενός βιβλίου.
+        </p>
+        <br>
+
+        <p class="post-text">
+            <b>Δύσκολη</b> άσκηση για ένα νέο προγραμματιστή και το πρώτο πρόβλημα που έπρεπε να ξεπεραστεί είναι το πως
+            γίνεται ένα κουμπί
+            αναζήτησης να καταλήγει σε 4 διαφορετικά functions, αντί για 1. Μετά ήταν το γραφικό
+            περιβάλλον, που
+            θα μπουν τα κουμπιά, που η αναζήτηση κλπ.
+        </p>
+
+        <img src="../post-images/art-gallery-database2.webp" class="post-img" alt="">
+
+        <p class="post-text">
+            <b>Το τελικό</b> αποτέλεσμα δεν είναι κακό για 2 ημερών δουλειά. Ασχέτως του λιτού γραφικού περιβάλλοντος, σημασία έχει οτι 
+            δημιουργήθηκε μια πλήρως λειτουργική βάση δεδομένων που μπορεί να διαχειριστεί εκατομμύρια εγγραφές με πλήρη αναζήτηση και βάλε-βγάλε
+            πρακτικά όλων των στοιχείων.
+        </p>
+        <br>
+
+        <p class="post-text">
+            <b>Ο κώδικας</b> για ολόκληρο το πρόγραμμα είναι <a
+                href="https://github.com/a2926z/python_by_example_150_answered_challenges/blob/main/python_by_example.py"
+                target="_blank"><b>εδώ</b></a> σαν άσκηση "150" και τρέχει σε οποιοδήποτε IDE χρησιμοποιεί ο
+            καθένας για την Python, ωστε να την τροποποιήσει ανάλογα με τις ανάγκες του.
+        </p>
+
+
+    </div>
+
+    <!--Footer-->
+    <div id="footer-placeholder">
+
+    </div>
+
+    <script>
+        $(function () {
+            $("#footer-placeholder").load("../footer.html");
+        });
+    </script>
+    <!--end of Footer-->
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
