@@ -156,6 +156,12 @@ img {
 .c-item {
   height: 800px;
   padding: 0 12%;
+  transition: transform 1.0s ease-in-out;
+}
+
+.carousel-fade .active.carousel-item-start,
+.carousel-fade .active.carousel-item-end {
+  transition: opacity 0s 1.0s;
 }
 
 .c-img {
@@ -235,7 +241,7 @@ img {
 
 .contact-me {
   text-align: center;
-  margin: 1.5% 10% 2%;
+  margin: 2% 10% 2%;
 }
 
 .btn {
@@ -459,6 +465,24 @@ img {
   justify-content: center;
 }
 
+#flex-main-page {
+  margin-top: -4.5%;
+  margin-bottom: -6%;
+}
+
+/* MY PAGES SECTION */
+
+.my-pages-titles {
+  text-align: center;
+  font-size: 32px;
+  padding-top: 1%;
+}
+
+.my-pages-h2 {
+  text-align: center; 
+  padding: 1% 0;
+}
+
 
 
 
@@ -530,7 +554,7 @@ img {
   }
 
   .contact-me {
-    padding-top: 6%;
+    padding-top: 8%;
   }
 
   .btn {
@@ -633,5 +657,28 @@ img {
   .flex-col-1,
   .flex-col-2 {
     margin: 2% 0;
+  }
+
+  #flex-main-page {
+    margin-top: 7%;
+  }
+
+  .opinions-page,
+  .projects-page {
+    padding-top: 8%;
+  }
+
+  .my-pages-titles {
+    text-align: center;
+    font-size: 24px;
+    padding-top: 0;
+  }
+
+  .my-pages-h2 {
+    padding-bottom: 6.5%;
+  }
+
+  .my-pages {
+    margin-bottom: -4%;
   }
 }
