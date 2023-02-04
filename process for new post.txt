@@ -1,0 +1,6 @@
+1. Commit and sync from vscode.
+2. Scan xml-sitemaps for new sitemap.
+3. add new sitemap to project.
+4. Commit and sync again.
+5. Submit new sitemap to google console.
+6. Scan the new URL at google console an submit crawling request.
