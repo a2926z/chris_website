@@ -228,13 +228,13 @@ img {
 
 @media (max-width: 1028px) {
   .c-item {
-    /* max-height and min-height below was 232, changed to 262, not a right way to define carousel dimensions I guess */
-    max-height: 262px;
+    /* max-height and min-height below was 232, changed to 252, not a right way to define carousel dimensions I guess */
+    max-height: 252px;
     padding: 0 5%;
   }
 
   .c-img {
-    min-height: 262px;
+    min-height: 252px;
   }
 
   .carousel-control-prev-icon {
