@@ -154,7 +154,9 @@ img {
 /* CAROUSEL SECTION */
 
 .c-item {
-  height: 800px;
+  /* height: 800px; */
+  max-height: 800px;
+  width: 100%;
   padding: 0 12%;
   transition: transform 1.0s ease-in-out;
 }
@@ -165,7 +167,9 @@ img {
 }
 
 .c-img {
-  min-height: 800px;
+  /* min-height: 800px; */
+  height: 100%;
+  /* max-height: 700px; */
   object-fit: cover;
 }
 
@@ -226,16 +230,18 @@ img {
   padding-bottom: 0.4%;
 }
 
-@media (max-width: 1028px) {
+/* CAROUSEL MEDIA SECTION */
+
+@media (max-width: 768px) {
   .c-item {
     /* max-height and min-height below was 232, changed to 252, not a right way to define carousel dimensions I guess */
-    max-height: 252px;
+    /* max-height: 252px; */
     padding: 0 5%;
   }
 
   .c-img {
-    min-height: 252px;
-  }
+    min-height: 262px;
+  } 
 
   .carousel-control-prev-icon {
   width: 30px;
@@ -275,6 +281,18 @@ img {
   padding-left: 10%;
 }
 
+}
+
+@media (min-width: 769px) and (max-width:1400px) {
+  .carousel-title {
+    font-size: 25px;
+    line-height: 44px;
+    width: 80%;
+  }
+
+  .c-item {
+    padding: 0 5%;
+  }
 }
 
 
