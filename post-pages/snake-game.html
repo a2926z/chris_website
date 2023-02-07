@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Φιδάκι, το αγαπημένο παιχνίδι απο τα παλιά, τώρα στον υπολογιστή σου</title>
+
+    <!-- Meta description -->
+    <meta name="description" content="Σε αυτή τη σελίδα θα βρείς το φιδάκι, ένα παιχνίδι - θρύλο των '90 που παίζαμε όλοι στα
+    Nokia κινητά μας.">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=EB+Garamond&family=IBM+Plex+Sans&family=Source+Sans+Pro&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS stylesheets -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/styles.css">
+
+    <!-- Bootstrap scripts -->
+    <!-- jQuery was identified as thread from lighthouse so was muted and everything so far works fine. Activated again as now Chrome 
+    displays an error -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+
+    <link rel="icon" href="../favicon33.webp">
+
+    <!-- script for navbar -->
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+
+<body class="post-body">
+
+    <!--Navigation bar-->
+    <div id="nav-placeholder">
+
+    </div>
+
+    <script>
+        $(function () {
+            $("#nav-placeholder").load("../nav.html");
+        });
+    </script>
+    <!--end of Navigation bar-->
+
+    <div class="post">
+        <div class="post-title-header">
+            <h1 class="post-title">Φιδάκι, το αγαπημένο παιχνίδι απο τα παλιά, τώρα στον υπολογιστή σου
+            </h1>
+        </div>
+
+        <img src="../post-images/snake-game1.webp" class="post-img-top">
+
+        <h2 class="post-h2">
+            Σε αυτή τη σελίδα θα βρείς το φιδάκι, ένα παιχνίδι - θρύλο των '90 που παίζαμε όλοι στα
+            Nokia κινητά μας.
+        </h2>
+        <br>
+
+        <p class="post-text">
+            <b>Λίγα</b> παιχνίδια αγαπήθηκαν όσο το ταπεινό φιδάκι, όταν στα τέλη της δεκαετίας του '90, στα Symbian
+            κινητά,
+            υπήρχαν ελάχιστα πράγματα να κάνεις για να περάσεις την ώρα σου. Προσωπικά έχω παίξει άπειρες ώρες,
+            ξαπλωμένος στον καναπέ του πατρικού μου, μέχρι το φιδάκι να καλύψει την 1,5 ίντσα (!) της οθόνης του Nokia
+            3310 και το παιχνίδι να τελειώσει στο max score. Και πάλι απ' την αρχή.
+        </p>
+        <br>
+
+        <p class="post-text">
+            <b>Με την</b> ίδια νοσταλγία ξεκίνησα την άσκηση της Python για την κατασκευή του παιχνιδιού σε υπολογιστή.
+            Μέχρι
+            που τα βρήκα μπαστούνια. Το παιχνίδι έπρεπε να φτιαχτεί με την βιβλιοθήκη Turtle, που είναι πραγματικά
+            μυστήρια και καθόλου εύχρηστη. Επίσης έπρεπε να χρησιμοποιηθούν Classes και όχι απλά functions που θα
+            τρέχουν το πρόγραμμα.
+        </p>
+
+        <img src="../post-images/snake-game2.webp" class="post-img" alt="">
+
+        <p class="post-text">
+            <b>Τα προβλήματα</b> που πρέπει να λυθούν σε ένα φαινομενικά απλό παιχνίδι σαν κι' αυτό είναι απίστευτα
+            πολλά. Απο
+            το πως θα μεγαλώνει το φιδάκι τρώγοντας την τροφή (πρέπει να προστεθεί ένα τετραγωνάκι στο τέλος της
+            τρέχουσας θέσης του φιδιού, που είναι ποιά ?), μέχρι το πως να μην βγαίνει η νέα τροφή επάνω στο σώμα του
+            φιδιού, που θα την κάλυπτε και δεν θα φαινόταν στην οθόνη μέχρι το φιδάκι να προχωρήσει και να αποκαλυφθεί.
+            Το τελευταίο ήταν μεγάλο πρόβλημα, ειδικά όταν το φιδάκι είχε μεγαλώσει αρκετά και η τροφή ήταν κρυμμένη για
+            αρκετά δευτερόλεπτα. Αλλά μια εβδομάδα ψαξίματος, πειραματισμών και βρισίματος το έλυσε και αυτό.
+        </p>
+        <br>
+
+        <p class="post-text">
+            <b>Στο τέλος</b> προστέθηκαν original mame ήχοι, high score, η δυνατότητα να κάνεις pause το παιχνίδι κλπ
+            για να
+            μοιάζει όσο το δυνατόν περισσότερο με αυτό που όλοι θυμόμαστε. Το παιχνίδι είναι ελεύθερο για κατέβασμα και
+            εγκατάσταση <a href="https://1drv.ms/u/s!ApZtI3LNpx79gQSFHTOmQBp5JjgJ?e=odTWhx"
+                target="_blank"><b>εδώ</b></a> και
+            ολόκληρος ο κώδικας είναι διαθέσιμος <a href="https://github.com/a2926z/snake-game"
+                target="_blank"><b>εδώ</b></a>. Όπως
+            όλα τα τα exe αρχεία που ανεβαίνουν σε αυτό το blog, έτσι και αυτό έχει σκαναριστεί στο <a
+                href="https://www.virustotal.com/gui/home/upload" target="_blank"><b>virus total</b></a> και έχουν
+            σταλεί
+            false positives σε όσα antivirus το βλέπουν λανθασμένα σαν ιό, πριν γίνουν διαθέσιμα για κατέβασμα.
+        </p>
+
+
+    </div>
+
+    <!--Footer-->
+    <div id="footer-placeholder">
+
+    </div>
+
+    <script>
+        $(function () {
+            $("#footer-placeholder").load("../footer.html");
+        });
+    </script>
+    <!--end of Footer-->
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
