@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Το χελωνάκι που περνά τον αυτοκινητόδρομο, τα παιχνίδια mame στα καλύτερα τους.</title>
+
+    <!-- Meta description -->
+    <meta name="description" content="Σε αυτή τη σελίδα θα βρείς το turtle crossing, ένα παιχνίδι mame απο τα παλιά 
+    φτιαγμένο στην Python.">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=EB+Garamond&family=IBM+Plex+Sans&family=Source+Sans+Pro&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS stylesheets -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/styles.css">
+
+    <!-- Bootstrap scripts -->
+    <!-- jQuery was identified as thread from lighthouse so was muted and everything so far works fine. Activated again as now Chrome 
+    displays an error -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+
+    <link rel="icon" href="../favicon33.webp">
+
+    <!-- script for navbar -->
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+
+<body class="post-body">
+
+    <!--Navigation bar-->
+    <div id="nav-placeholder">
+
+    </div>
+
+    <script>
+        $(function () {
+            $("#nav-placeholder").load("../nav.html");
+        });
+    </script>
+    <!--end of Navigation bar-->
+
+    <div class="post">
+        <div class="post-title-header">
+            <h1 class="post-title">Το χελωνάκι που περνά τον αυτοκινητόδρομο, τα παιχνίδια mame στα καλύτερα τους.
+            </h1>
+        </div>
+
+        <img src="../post-images/turtle-crossing1.webp" class="post-img-top">
+
+        <h2 class="post-h2">
+            Σε αυτή τη σελίδα θα βρείς το turtle crossing, ένα παιχνίδι mame απο τα παλιά
+            φτιαγμένο στην Python.
+        </h2>
+        <br>
+
+        <p class="post-text">
+            <b>Το Turtle</b> Crossing ήταν ακόμα μια άσκηση μέτριας δυσκολίας στην Python. Είναι απο αυτές τις ασκήσεις
+            που αν
+            καταφέρεις να λύσεις το βασικό πρόβλημα, τα υπόλοιπα έρχονται εύκολα. Πρόκειται για το κλασικό mame παιχνίδι
+            που παίζαμε μικροί στα μαγαζιά ηλεκτρονικών με το εικοσάρικο. Όχι το εικοσάευρω, μιλάω για το παλιό ασημένιο
+            νόμισμα των 20 δραχμών, το εισιτήριο του παραδείσου για την πιτσιρικαρία της εποχής.
+        </p>
+
+        <img src="../post-images/turtle-crossing2.webp" class="post-img" alt="">
+
+        <p class="post-text">
+            <b>Το παιχνίδι</b> φτιάχτηκε με την βιβλιοθήκη Turtle (!) και το βασικότερο πρόβλημα αφορά στον αριθμό των
+            αυτοκινήτων που θα παράγονται. Αν δημιουργείται ένα αυτοκίνητο με κάθε ανανέωση της οθόνης (0,1
+            δευτερόλεπτα), έχεις 600 αυτοκίνητα κάθε λεπτό στην οθόνη σου, ο συνωστισμός είναι απίστευτος και το παιχνίδι δεν μπορεί 
+            να προχωρήσει. Απο την άλλη αν μεγαλώσεις την ανανέωση της οθόνης το παιχνίδι δεν τρέχει ομαλά και φαίνεται να "κολλάει".
+        </p>
+        <br>
+
+        <p class="post-text">
+            <b>Κλασικό</b> πρόβλημα προγραμματισμού που πρέπει να σκεφτείς "out of the box" για να λυθεί. Και η λύση
+            είναι οι
+            κληρώσεις. Δηλαδή κάθε φορά που τρέχει η λειτουργία παραγωγής αυτοκινήτου, δεν θα δημιουργείται ένα νέο
+            αυτοκίνητο αλλά θα γίνεται μια κλήρωση με αριθμούς απο το 1 ως το 5 π.χ, και αυτοκίνητο θα παράγεται μόνο όταν
+            κληρωθεί το νούμερο 3. Έτσι περιορίζεις τα νέα αυτοκίνητα κατα 80% και η ανανέωση της οθόνης σου διατηρείται
+            κανονικά.
+        </p>
+
+        <img src="../post-images/turtle-crossing3.webp" class="post-img" alt="">
+
+        <p class="post-text">
+            <b>Το παιχνίδι</b> είναι διαθέσιμο για εγκατάσταση σε Windows <a
+                href="https://1drv.ms/u/s!ApZtI3LNpx79gQaAAbXE-5-nwjgH?e=RPlFV0" target="_blank"><b>εδώ</b></a>
+            και ολόκληρος ο κώδικας του προγράμματος βρίσκεται <a href="https://github.com/a2926z/turtle-crossing"
+                target="_blank"><b>εδώ</b></a>. Όπως και σε κάθε άλλο πρόγραμμα που διατίθεται στο blog, το
+            αρχείο exe έχει σκαναριστεί στο <a href="https://www.virustotal.com/gui/home/upload" target="_blank"><b>virus total</b></a>  για ιούς.
+        </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+
+    <!--Footer-->
+    <div id="footer-placeholder">
+
+    </div>
+
+    <script>
+        $(function () {
+            $("#footer-placeholder").load("../footer.html");
+        });
+    </script>
+    <!--end of Footer-->
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
