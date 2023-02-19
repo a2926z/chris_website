@@ -340,13 +340,13 @@ img {
 .bottom-container {
   background-color: #66BFBF;
   text-align: center;
-  padding: 1.5% 2% 0.1%;
+  padding: 2% 2% 0.1%;
 
 }
 
 .footer-link {
   color: #11999E;
-  padding: 1%;
+  padding: 0.8%;
   font-size: 1.35rem;
   font-family: 'EB Garamond', serif;
 }
@@ -356,6 +356,20 @@ img {
   padding: 1%;
   font-size: 1.2rem;
   font-family: 'EB Garamond', serif;
+}
+
+@media (max-width: 1028px) {
+  .footer-link img{
+    width: 24px;
+  }
+
+  .footer-link {
+    padding: 3%;
+  }
+
+  .name {
+    padding-top: 2%;
+  }
 }
 
 /* POST SECTION */
