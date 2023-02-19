@@ -351,6 +351,11 @@ img {
   font-family: 'EB Garamond', serif;
 }
 
+.footer-link img {
+  width: 28px;
+  /* height: 28px; */
+}
+
 .name {
   color: #EAF6F6;
   padding: 1%;
