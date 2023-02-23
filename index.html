@@ -28,13 +28,19 @@
     integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
   <link rel="stylesheet" href="css/styles.css">
 
+  <!-- js contact-form connection -->
+  <link rel="stylesheet" href="css/contact.css">
+	<script src="jquery-3.6.0.min.js"></script>
+	<script src="contact.js"></script>
+
   <!-- Bootstrap scripts -->
 
   <!-- jQuery was identified as thread from lighthouse so was muted and everything so far works fine. Activated again as now Chrome 
     displays an error -->
-  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+  <!-- deleted the line of code below in exvhange with the full jquery 3.6.0 used in contact form above -->
+  <!-- <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
     integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-    crossorigin="anonymous"></script>
+    crossorigin="anonymous"></script> -->
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
     integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
     crossorigin="anonymous"></script>
@@ -328,21 +334,44 @@
     </div>
   </section>
 
-  <section id="bottom-container">
-    <div class="bottom-container">
+  <button id="open-popup">Contact Us</button>
 
-      <a class="footer-link" href="https://www.facebook.com/chrisfytwebsite/" target="_blank"><img
-          src="social icons/facebook-line-icon.png" alt=""></a>
-      <a class="footer-link" href="https://twitter.com/chrismaxi2" target="_blank"><img
-          src="social icons/twitter-line-icon.png" alt=""></a>
-      <a class="footer-link" href="https://www.youtube.com/@chris_fyt/videos" target="_blank"><img
-          src="social icons/youtube-line-icon.png" alt=""></a>
-          
-      <!-- <a class="footer-link" href="https://www.facebook.com/chrisfytwebsite/" target="_blank">Facebook</a>
+	<div class="popup" id="popup">
+		<div class="popup-container">
+			<h2>Contact Us</h2>
+			<form id="contact-form" method="post">
+				<label for="name">Name</label>
+				<input type="text" id="name" name="name" placeholder="Enter your name">
+
+				<label for="email">Email</label>
+				<input type="email" id="email" name="email" placeholder="Enter your email">
+
+				<label for="message">Message</label>
+				<textarea id="message" name="message" placeholder="Enter your message"></textarea>
+
+				<!-- <label for="password">Password</label>
+				<input type="password" id="password" name="password" placeholder="Enter your password"> -->
+
+				<button type="submit">Send</button>
+			</form>
+			<a class="close" href="#">&times;</a>
+		</div>
+	</div>    
+
+  <div class="bottom-container">
+
+    <a class="footer-link" href="https://www.facebook.com/chrisfytwebsite/" target="_blank"><img
+        src="social icons/facebook-line-icon.png" alt=""></a>
+    <a class="footer-link" href="https://twitter.com/chrismaxi2" target="_blank"><img
+        src="social icons/twitter-line-icon.png" alt=""></a>
+    <a class="footer-link" href="https://www.youtube.com/@chris_fyt/videos" target="_blank"><img
+        src="social icons/youtube-line-icon.png" alt=""></a>
+
+    <!-- <a class="footer-link" href="https://www.facebook.com/chrisfytwebsite/" target="_blank">Facebook</a>
       <a class="footer-link" href="https://twitter.com/chrismaxi2" target="_blank">Twitter</a>
       <a class="footer-link" href="https://www.youtube.com/@chris_fyt/videos" target="_blank">YouTube</a> -->
-      <p class="name">© 2023 Chris Fyt</p>
-    </div>
+    <p class="name">© 2023 Chris Fyt</p>
+  </div>
   </section>
 
 </body>
