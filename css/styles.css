@@ -326,6 +326,7 @@ img {
   display: block;
   /* position: relative; */
   margin: 1% auto 2.4%;
+  transition: 0.25s;
 
 
 }

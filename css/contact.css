@@ -44,7 +44,7 @@
 .popup button[type="submit"] {
 	background-color: #42b3b3;
 	/* font-family: Georgia; */
-	font-size: 19px;
+	font-size: 20px;
 	color: white;
 	padding: 12px 50px;
 	border: none;
@@ -57,7 +57,11 @@
 }
 
 .popup button[type="submit"]:hover {
-	opacity: 75%;
+	opacity: 80%;
+}
+
+.popup button[type="submit"]:active {
+	opacity: 60%;
 }
 
 .popup .close {
