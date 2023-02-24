@@ -323,8 +323,9 @@ img {
   font-size: 20px;
   padding: 10px 20px 10px 20px;
   text-decoration: none;
-  position: relative;
-  margin: 1% auto 0;
+  display: block;
+  /* position: relative; */
+  margin: 1% auto 2.4%;
 
 
 }
@@ -644,7 +645,7 @@ img {
   }
 
   .btn {
-    margin: 2% auto 7%;
+    margin: 2% auto 5.5%;
     padding: 2% 4%;
   }
 

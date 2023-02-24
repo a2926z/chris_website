@@ -30,7 +30,7 @@
 
   <!-- js contact-form connection -->
   <link rel="stylesheet" href="css/contact.css">
-	<script src="jquery-3.6.0.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 	<script src="contact.js"></script>
 
   <!-- Bootstrap scripts -->
@@ -330,18 +330,24 @@
       <h2>Επικοινωνία</h2>
       <h3>Αν θέλεις να πεις ένα "γειά",</h3>
       <p class="contact-text">ή και κάτι παραπάνω, επικοινώνησε μαζί μου με έναν απο τους παρακάτω τρόπους</p>
-      <a class="btn" href="mailto:a2926z@gmail.com" target="_blank">CONTACT ME</a>
+      <!-- <a class="btn" href="mailto:a2926z@gmail.com" target="_blank">CONTACT ME</a> -->
     </div>
   </section>
 
   <!-- POP-UP CONTACT FORM -->
 
-  <!-- <button id="open-popup">Contact Us</button>
+  <button id="open-popup" class="btn">Contact Me</button>
 
 	<div class="popup" id="popup">
 		<div class="popup-container">
-			<h2>Contact Us</h2>
-			<form id="contact-form" method="post">
+			<h2>Contact Me</h2>
+      <form id="contact-form" action="https://formsubmit.co/35e63e971e864eb56a1d249a12e0a855" method="POST" />
+			<!-- <form id="contact-form" method="post" action="https://formsubmit.co/a2926z@gmail.com"> -->
+        <!-- CAPTCHA enabled for now, disable unchecking the code below -->
+        <!-- <input type="hidden" name="_captcha" value="false"> -->
+        <input type="hidden" name="_autoresponse" value="
+        Ευχαριστώ πολύ για το μήνυμα, θα επικοινωνήσω μαζί σας σύντομα.
+        ">
 				<label for="name">Name</label>
 				<input type="text" id="name" name="name" placeholder="Enter your name">
 
@@ -351,11 +357,11 @@
 				<label for="message">Message</label>
 				<textarea id="message" name="message" placeholder="Enter your message"></textarea>
 
-				<button type="submit">Send</button>
+				<button type="submit" class="submit-btn">Send</button>
 			</form>
 			<a class="close" href="#">&times;</a>
 		</div>
-	</div>     -->
+	</div>    
 
   <div class="bottom-container">
 

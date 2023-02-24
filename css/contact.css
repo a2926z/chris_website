@@ -21,12 +21,12 @@
 
 .popup h2 {
 	margin-top: 0;
+	text-align: center;
 }
 
 .popup input[type="text"],
 .popup input[type="email"],
-.popup textarea,
-.popup input[type="password"] {
+.popup textarea {
 	width: 100%;
 	padding: 12px;
 	border: 1px solid #ccc;
@@ -37,17 +37,27 @@
 	resize: vertical;
 }
 
+.popup textarea {
+	height: 120px;
+}
+
 .popup button[type="submit"] {
-	background-color: #4CAF50;
+	background-color: #42b3b3;
+	font-family: Georgia;
+	font-size: 19px;
 	color: white;
-	padding: 12px 20px;
+	padding: 12px 50px;
 	border: none;
 	border-radius: 4px;
 	cursor: pointer;
+	display: block; /* Ensures button is full width */
+  	margin: 0 auto; /* Centers button horizontally */
+  	text-align: center; /* Centers text within button */
+
 }
 
 .popup button[type="submit"]:hover {
-	background-color: #45a049;
+	opacity: 75%;
 }
 
 .popup .close {
@@ -64,4 +74,11 @@
 	color: #000;
 	text-decoration: none;
 	cursor: pointer;
+}
+
+@media (max-width: 1028px) {
+	.popup-container {
+		width: 85%;
+		top: 10%;
+	}
 }
