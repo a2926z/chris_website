@@ -43,7 +43,7 @@
 
 .popup button[type="submit"] {
 	background-color: #42b3b3;
-	font-family: Georgia;
+	/* font-family: Georgia; */
 	font-size: 19px;
 	color: white;
 	padding: 12px 50px;
