@@ -12,4 +12,13 @@ $(document).ready(function() {
       }
     });
 
+    // Form validation
+  $("#contact-form").submit(function(event) {
+    var email = document.getElementById("email").value;
+    if (!/^([a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4})$/.test(email)) {
+      alert("Please enter a valid email address.");
+      return false;
+    }
+  });
+
   });
