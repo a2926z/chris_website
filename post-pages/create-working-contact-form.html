@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to create a fully working contact form for your website</title>
+
+    <!-- Meta description -->
+    <meta name="description" content="Learn how to create a user-friendly and fully functional contact form for your website using HTML, CSS, JavaScript, and the free 
+        formsubmit.co service. We'll guide you through the creation of a professional-looking contact form that's easy to set up and use, while 
+        also keeping your email address hidden from spammers. Our post includes code snippets, instructions, and helpful tips to help you customize 
+        the form to your liking. Download the complete code and use it on your website today!">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=EB+Garamond&family=IBM+Plex+Sans&family=Source+Sans+Pro&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS stylesheets -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/styles.css">
+
+    <!-- Bootstrap scripts -->
+    <!-- jQuery was identified as thread from lighthouse so was muted and everything so far works fine. Activated again as now Chrome 
+    displays an error -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+
+    <link rel="icon" href="../favicon33.ico">
+
+    <!-- script for navbar -->
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+
+    <!-- og metatag for fb -->
+    <meta property="og:title" content="How to create a fully working contact form for your website" />
+    <meta property="og:description" content="Learn how to create a user-friendly and fully functional contact form for your website using HTML, CSS, 
+    JavaScript, and the free formsubmit.co service. We'll guide you through the creation of a professional-looking contact form that's easy to set up 
+    and use, while also keeping your email address hidden from spammers. Our post includes code snippets, instructions, and helpful tips to help you 
+    customize the form to your liking. Download the complete code and use it on your website today!" />
+    <meta property="og:image"
+        content="https://a2926z.github.io/chris_website/post-images/create-working-contact-form1.webp" />
+
+    <!-- Google analytics script -->
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3SH07R6XXT"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-3SH07R6XXT');
+    </script>
+</head>
+
+<body class="post-body">
+
+    <!--Navigation bar-->
+    <div id="nav-placeholder">
+
+    </div>
+
+    <script>
+        $(function () {
+            $("#nav-placeholder").load("../nav.html");
+        });
+    </script>
+    <!--end of Navigation bar-->
+
+    <div class="post">
+        <div class="post-title-header">
+            <h1 class="post-title">How to create a fully working contact form for your website
+            </h1>
+        </div>
+
+        <img src="../post-images/create-working-contact-form1.webp" class="post-img-top">
+
+        <h2 class="post-h2">
+            Learn how to create a user-friendly and fully functional contact form for your website using HTML, CSS,
+            JavaScript, and the free formsubmit.co service. We'll guide you through the creation of a
+            professional-looking contact form that's easy to set up and use, while also keeping your email address
+            hidden from spammers. Our post includes code snippets, instructions, and helpful tips to help you customize
+            the form to your liking. Download the complete code and use it on your website today!
+        </h2>
+        <br>
+
+        <p class="post-text">
+            <b>A contact form</b> is an essential component of any website. It needs to look professional and perform
+            its
+            primary function of facilitating easy and secure communication between visitors and site administrators. In
+            this post, we'll create a fully functional contact form using HTML, CSS, JavaScript, and the free
+            formsubmit.co service. The resulting form will be user-friendly and provide a seamless communication
+            experience for your site visitors.
+        </p>
+        <br>
+
+        <p class="post-text">
+            <b>The HTML page</b> is the easy part. We'll create a button that opens up the popup contact form, and a
+            form tag
+            with inputs for all the information we need from the user. Specifically, this form asks for their name,
+            email, and message as the only inputs required. Finally, we'll create the button that sends the message. The
+            HTML code for this page will look something like this:
+        </p>
+
+        <pre class="post-text">
+            <code class="language-html">
+            &lt;button id="open-popup" class="btn"&gt;Contact Me&lt;/button&gt;
+
+            &lt;div class="popup" id="popup"&gt;
+              &lt;div class="popup-container"&gt;
+                &lt;h2&gt;Contact Me&lt;/h2&gt;
+                &lt;form id="contact-form" action="https://formsubmit.co/your-random-like-string" method="POST"&gt;
+                  &lt;!-- CAPTCHA enabled for now, disable unchecking the code below --&gt;
+                  &lt;!-- &lt;input type="hidden" name="_captcha" value="false"&gt; --&gt;
+                  &lt;input type="hidden" name="_autoresponse" value="
+                  Thank you for your message, I will be in touch with you shortly.
+                  "&gt;
+                  &lt;input type="hidden" name="_next" value="https://a2926z.github.io/chris_website/"&gt;
+                            
+                  &lt;label for="name"&gt;Name&lt;/label&gt;
+                  &lt;input type="text" id="name" name="name" placeholder="Enter your name" required&gt;
+            
+                  &lt;label for="email"&gt;Email&lt;/label&gt;
+                  &lt;input type="email" id="email" name="email" placeholder="Enter your email" required&gt;
+            
+                  &lt;label for="message"&gt;Message&lt;/label&gt;
+                  &lt;textarea id="message" name="message" placeholder="Enter your message" required&gt;&lt;/textarea&gt;
+            
+                  &lt;button type="submit" class="submit-btn"&gt;Send&lt;/button&gt;
+                &lt;/form&gt;
+                &lt;a class="close" href="#">&amp;times;&lt;/a&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;</code>
+        </pre>
+        <br>
+
+        <p class="post-text">
+            <b>The only thing</b> that needs to be explained here is the "your-random-like string" in the form's action.
+            When
+            you create the form and submit a test message, formsubmit.co will send a confirmation email to the email
+            address you provided for receiving messages. Once you confirm the email, you will receive a second email
+            containing a "your-random-like string," which is a string of letters and numbers. You will need to add this
+            string to your HTML page in place of your personal email address. This will help to hide your email address
+            from spammers who could potentially view it in the page's code, while allowing you to receive messages
+            normally through formsubmit.co.
+        </p>
+        <br>
+
+        <p class="post-text">
+            <b>Once you have</b> completed your HTML page, it's time to work on the CSS. This is where everyone can put
+            their
+            own personal touch or ask for help. I personally reached out to ChatGPT for help with my CSS, and I think he
+            did an excellent job. You can find the completed code at the end of the article, so I won't go into further
+            detail here.
+        </p>
+        <br>
+
+        <p class="post-text">
+            <b>JavaScript</b> has three main tasks to perform. It can open the form as a popup, close it, and check for
+            any
+            errors in the email. Additionally, it can close the form if you click outside of it and prevent the page
+            from scrolling to the top if you simply close the form, which is the default behavior. All of these actions
+            require approximately 20 lines of code, which are presented below.
+        </p>
+
+
+        <pre class="post-text"><code class="language-javascript">
+            $(document).ready(function () {
+
+            // Open popup
+            $("#open-popup").click(function () {
+              $("#popup").fadeIn(300);
+            });
+          
+            $("#popup, .close").click(function (event) {
+              if ($(event.target).is("#popup, .close")) { // Check if click is outside of form or on close button
+                event.preventDefault();
+                $("#popup").fadeOut(300);
+              }
+            });
+          
+            // Form validation
+            $("#contact-form").submit(function (event) {
+              var email = document.getElementById("email").value;
+              if (!/^([a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4})$/.test(email)) {
+                alert("Please enter a valid email address.");
+                return false;
+              }
+            });
+          
+          });</code></pre>
+        <br>
+
+        <p class="post-text">
+            <b>Finally</b> , setting up the form submission functionality is really simple, as we explained earlier.
+            Instead of
+            requiring registration, you just need to configure the action attribute of the form tag like this:
+        </p>
+        <br>
+        <p class="post-text" style="text-align: center;">
+            action="https://formsubmit.co/your-email-address"
+        </p>
+        <br>
+        <p class="post-text">
+            After confirming your email, you'll receive a unique and
+            bolded string to replace "your-email-address" with. This helps keep your real email address hidden from
+            spammers. And that's it – you're almost ready to go!
+        </p>
+        <br>
+
+        <p class="post-text">
+            <b>Additional</b> settings allow you to automate your responses, disable CAPTCHAs (although not recommended
+            by
+            formsubmit), and create a new "thank you" page where users can see that their message has been successfully
+            sent, among other optional configurations. Personally, I found it helpful, after the message, to
+            auto-transfer the user to my main page and set up an automated response that reads, 'Thank you for your
+            message, I will
+            be in touch with you shortly.' For more optional settings, you can find them all on their
+            webpage <a href="https://formsubmit.co/" target="_blank"><b>here</b></a>.
+        </p>
+
+        <img src="../post-images/create-working-contact-form2.webp" class="post-img" alt="">
+
+        <p class="post-text">
+            <b>Don't forget</b> to add your personal information to "your-email", "your-random-like string" and
+            "your-website-url." Also, make sure to connect your CSS and JS folders to your HTML page. The form works
+            fine with Gmail as well. The complete code for this popup contact form, including all the necessary HTML,
+            CSS,
+            and JavaScript files, is available for download <a href="https://github.com/a2926z/contact-form"
+                target="_blank"><b>here</b></a>. Feel free to grab it and use it however you like. If you want to see the form
+                in full action, go to the bottom of my <a href="https://a2926z.github.io/chris_website/"><b>main page</b></a>  and give it a try.
+
+        </p>
+
+
+
+
+
+    </div>
+
+    <!--Footer-->
+    <div id="footer-placeholder">
+
+    </div>
+
+    <script>
+        $(function () {
+            $("#footer-placeholder").load("../footer.html");
+        });
+    </script>
+    <!--end of Footer-->
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
