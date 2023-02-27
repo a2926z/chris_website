@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>    
+<head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Το χελωνάκι που περνά τον αυτοκινητόδρομο, τα παιχνίδια mame στα καλύτερα τους.</title>
+    <title>Turtle Crossing: A Classic Arcade Game Revisited in Python</title>
 
     <!-- Meta description -->
-    <meta name="description" content="Σε αυτή τη σελίδα θα βρείς το turtle crossing, ένα παιχνίδι mame απο τα παλιά 
-    φτιαγμένο στην Python.">
+    <meta name="description" content="Let's take a stroll down memory lane and revisit the classic arcade game, Turtle Crossing, in Python! This fun 
+    game poses a challenge with its overwhelming car production, but fear not! You can overcome this obstacle by utilizing random draws to keep the 
+    game running smoothly. Download the game and access the program code to start playing and learning today.">
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -42,9 +43,10 @@
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 
     <!-- og metatag for fb -->
-    <meta property="og:title" content="Το χελωνάκι που περνά τον αυτοκινητόδρομο, τα παιχνίδια mame στα καλύτερα τους." />
-    <meta property="og:description" content="Εδώ θα βρείς το turtle crossing, ένα παιχνίδι mame απο τα παλιά
-    φτιαγμένο στην Python." />
+    <meta property="og:title" content="Turtle Crossing: A Classic Arcade Game Revisited in Python" />
+    <meta property="og:description" content="Let's take a stroll down memory lane and revisit the classic arcade game, Turtle Crossing, in Python! This 
+    fun game poses a challenge with its overwhelming car production, but fear not! You can overcome this obstacle by utilizing random draws to keep the
+     game running smoothly. Download the game and access the program code to start playing and learning today." />
     <meta property="og:image" content="https://a2926z.github.io/chris_website/post-images/turtle-crossing1.webp" />
 
     <!-- Google analytics script -->
@@ -75,53 +77,52 @@
 
     <div class="post">
         <div class="post-title-header">
-            <h1 class="post-title">Το χελωνάκι που περνά τον αυτοκινητόδρομο, τα παιχνίδια mame στα καλύτερα τους.
+            <h1 class="post-title">Turtle Crossing: A Classic Arcade Game Revisited in Python
             </h1>
         </div>
 
         <img src="../post-images/turtle-crossing1.webp" class="post-img-top">
 
         <h2 class="post-h2">
-            Σε αυτή τη σελίδα θα βρείς το turtle crossing, ένα παιχνίδι mame απο τα παλιά
-            φτιαγμένο στην Python.
+            Let's take a stroll down memory lane and revisit the classic arcade game, Turtle Crossing, in Python! This
+            fun game poses a challenge with its overwhelming car production, but fear not! You can overcome this
+            obstacle by utilizing random draws to keep the game running smoothly. Download the game and access the
+            program code to start playing and learning today.
         </h2>
         <br>
 
         <p class="post-text">
-            <b>Το Turtle</b> Crossing ήταν ακόμα μια άσκηση μέτριας δυσκολίας στην Python. Είναι απο αυτές τις ασκήσεις
-            που αν
-            καταφέρεις να λύσεις το βασικό πρόβλημα, τα υπόλοιπα έρχονται εύκολα. Πρόκειται για το κλασικό mame παιχνίδι
-            που παίζαμε μικροί στα μαγαζιά ηλεκτρονικών με το εικοσάρικο. Όχι το εικοσάευρω, μιλάω για το παλιό ασημένιο
-            νόμισμα των 20 δραχμών, το εισιτήριο του παραδείσου για την πιτσιρικαρία της εποχής.
+          <b>The Turtle Crossing</b>   exercise in Python is of moderate difficulty. It's one of those exercises where if you
+            can solve the basic problem, the rest comes easily. It's a classic arcade game that we used to play as kids
+            in electronic stores with the twenty-drachma coin, not the twenty-euro one. I'm talking about the old silver
+            coin that was the ticket to paradise for kids back then.
         </p>
 
         <img src="../post-images/turtle-crossing2.webp" class="post-img" alt="">
 
         <p class="post-text">
-            <b>Το παιχνίδι</b> φτιάχτηκε με την βιβλιοθήκη Turtle (!) και το βασικότερο πρόβλημα αφορά στον αριθμό των
-            αυτοκινήτων που θα παράγονται. Αν δημιουργείται ένα αυτοκίνητο με κάθε ανανέωση της οθόνης (0,1
-            δευτερόλεπτα), έχεις 600 αυτοκίνητα κάθε λεπτό στην οθόνη σου, ο συνωστισμός είναι απίστευτος και το παιχνίδι δεν μπορεί 
-            να προχωρήσει. Απο την άλλη αν μεγαλώσεις την ανανέωση της οθόνης το παιχνίδι δεν τρέχει ομαλά και φαίνεται να "κολλάει".
+         <b>The game was</b>    built using the Turtle library, and the main issue concerns the number of cars being produced.
+            If a new car is created with every screen refresh (0.1 seconds), you will have 600 cars on your screen every
+            minute, causing unbearable congestion and preventing the game from progressing. On the other hand, if you
+            increase the screen refresh rate, the game runs poorly and appears to "freeze".
         </p>
         <br>
 
         <p class="post-text">
-            <b>Κλασικό</b> πρόβλημα προγραμματισμού που πρέπει να σκεφτείς "out of the box" για να λυθεί. Και η λύση
-            είναι οι
-            κληρώσεις. Δηλαδή κάθε φορά που τρέχει η λειτουργία παραγωγής αυτοκινήτου, δεν θα δημιουργείται ένα νέο
-            αυτοκίνητο αλλά θα γίνεται μια κλήρωση με αριθμούς απο το 1 ως το 5 π.χ, και αυτοκίνητο θα παράγεται μόνο όταν
-            κληρωθεί το νούμερο 3. Έτσι περιορίζεις τα νέα αυτοκίνητα κατα 80% και η ανανέωση της οθόνης σου διατηρείται
-            κανονικά.
+          <b>This is a classic</b>   programming problem that requires "out of the box" thinking to solve. The solution
+            involves using random draws. Instead of creating a new car each time the production function runs, a draw is
+            made from numbers 1 to 5, for example, and a car is only produced when the number 3 is drawn. This restricts
+            new cars by 80%, and your screen refresh rate remains normal.
         </p>
 
         <img src="../post-images/turtle-crossing3.webp" class="post-img" alt="">
 
         <p class="post-text">
-            <b>Το παιχνίδι</b> είναι διαθέσιμο για εγκατάσταση σε Windows <a
-                href="https://1drv.ms/u/s!ApZtI3LNpx79gQaAAbXE-5-nwjgH?e=RPlFV0" target="_blank"><b>εδώ</b></a>
-            και ολόκληρος ο κώδικας του προγράμματος βρίσκεται <a href="https://github.com/a2926z/turtle-crossing"
-                target="_blank"><b>εδώ</b></a>. Όπως και σε κάθε άλλο πρόγραμμα που διατίθεται στο blog, το
-            αρχείο exe έχει σκαναριστεί στο <a href="https://www.virustotal.com/gui/home/upload" target="_blank"><b>virus total</b></a>  για ιούς.
+           <b>The game is</b>  available for <a href="https://1drv.ms/u/s!ApZtI3LNpx79gQaAAbXE-5-nwjgH?e=RPlFV0"
+                target="_blank"><b>download here</b></a> and the entire program code can be found <a
+                href="https://github.com/a2926z/turtle-crossing" target="_blank"><b>here</b></a>. Just like
+            any other program available on the blog, the exe file has been scanned for viruses using <a
+                href="https://www.virustotal.com/gui/home/upload" target="_blank"><b>Virus Total</b></a>.
         </p>
 
 

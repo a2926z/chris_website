@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>    
+<head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Φιδάκι, το αγαπημένο παιχνίδι απο τα παλιά, τώρα στον υπολογιστή σου</title>
+    <title>Building the Classic Snake Game in Python Using the Turtle Library</title>
 
     <!-- Meta description -->
-    <meta name="description" content="Σε αυτή τη σελίδα θα βρείς το φιδάκι, ένα παιχνίδι - θρύλο των '90 που παίζαμε όλοι στα
-    Nokia κινητά μας.">
+    <meta name="description" content="Join us on a nostalgic journey as we recreate the beloved Snake Game in Python using the Turtle library. Discover 
+    how we overcame challenges such as positioning the snake's body and food spawning. Download the game for free and explore the source code to learn 
+    more.">
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -42,9 +43,10 @@
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 
     <!-- og metatag for fb -->
-    <meta property="og:title" content="Φιδάκι, το αγαπημένο παιχνίδι απο τα παλιά, τώρα στον υπολογιστή σου" />
-    <meta property="og:description" content="Εδώ θα βρείς το φιδάκι, ένα παιχνίδι - θρύλο των '90 που παίζαμε όλοι στα
-    Nokia κινητά μας." />
+    <meta property="og:title" content="Building the Classic Snake Game in Python Using the Turtle Library" />
+    <meta property="og:description" content="Join us on a nostalgic journey as we recreate the beloved Snake Game in Python using the Turtle library. 
+    Discover how we overcame challenges such as positioning the snake's body and food spawning. Download the game for free and explore the source code 
+    to learn more." />
     <meta property="og:image" content="https://a2926z.github.io/chris_website/post-images/snake-game1.webp" />
 
     <!-- Google analytics script -->
@@ -75,60 +77,58 @@
 
     <div class="post">
         <div class="post-title-header">
-            <h1 class="post-title">Φιδάκι, το αγαπημένο παιχνίδι απο τα παλιά, τώρα στον υπολογιστή σου
+            <h1 class="post-title">Building the Classic Snake Game in Python Using the Turtle Library
             </h1>
         </div>
 
         <img src="../post-images/snake-game1.webp" class="post-img-top">
 
         <h2 class="post-h2">
-            Σε αυτή τη σελίδα θα βρείς το φιδάκι, ένα παιχνίδι - θρύλο των '90 που παίζαμε όλοι στα
-            Nokia κινητά μας.
+            Join us on a nostalgic journey as we recreate the beloved Snake Game in Python using the Turtle library.
+            Discover how we overcame challenges such as positioning the snake's body and food spawning. Download the
+            game for free and explore the source code to learn more.
         </h2>
         <br>
 
         <p class="post-text">
-            <b>Λίγα</b> παιχνίδια αγαπήθηκαν όσο το ταπεινό φιδάκι, όταν στα τέλη της δεκαετίας του '90, στα Symbian
-            κινητά,
-            υπήρχαν ελάχιστα πράγματα να κάνεις για να περάσεις την ώρα σου. Προσωπικά έχω παίξει άπειρες ώρες,
-            ξαπλωμένος στον καναπέ του πατρικού μου, μέχρι το φιδάκι να καλύψει την 1,5 ίντσα (!) της οθόνης του Nokia
-            3310 και το παιχνίδι να τελειώσει στο max score. Και πάλι απ' την αρχή.
+          <b>Few games have</b>   been loved as much as the humble Snake Game, back in the late '90s when there were very few
+            things
+            to do on Symbian phones to pass the time. Personally, I've spent countless hours lying on my dad's couch,
+            trying to make the Snake cover the 1.5-inch (!) screen of my Nokia 3310 and reaching the max score, only to
+            start all over again.
         </p>
         <br>
 
         <p class="post-text">
-            <b>Με την</b> ίδια νοσταλγία ξεκίνησα την άσκηση της Python για την κατασκευή του παιχνιδιού σε υπολογιστή.
-            Μέχρι
-            που τα βρήκα μπαστούνια. Το παιχνίδι έπρεπε να φτιαχτεί με την βιβλιοθήκη Turtle, που είναι πραγματικά
-            μυστήρια και καθόλου εύχρηστη. Επίσης έπρεπε να χρησιμοποιηθούν Classes και όχι απλά functions που θα
-            τρέχουν το πρόγραμμα.
+          <b>With the same</b>   nostalgia, I started the Python exercise to create the game on a computer. Until I hit a snag.
+            The game had to be built using the Turtle library, which is really mysterious and not user-friendly at all.
+            Additionally, I had to use classes instead of simple functions to run the program.
         </p>
 
         <img src="../post-images/snake-game2.webp" class="post-img" alt="">
 
         <p class="post-text">
-            <b>Τα προβλήματα</b> που πρέπει να λυθούν σε ένα φαινομενικά απλό παιχνίδι σαν κι' αυτό είναι απίστευτα
-            πολλά. Απο
-            το πως θα μεγαλώνει το φιδάκι τρώγοντας την τροφή (πρέπει να προστεθεί ένα τετραγωνάκι στο τέλος της
-            τρέχουσας θέσης του φιδιού, που είναι ποιά ?), μέχρι το πως να μην βγαίνει η νέα τροφή επάνω στο σώμα του
-            φιδιού, που θα την καλύπτει και δεν θα φαίνεται στην οθόνη μέχρι το φιδάκι να προχωρήσει και να αποκαλυφθεί.
-            Το τελευταίο ήταν μεγάλο πρόβλημα, ειδικά όταν το φιδάκι είχε μεγαλώσει αρκετά και η τροφή ήταν κρυμμένη για
-            αρκετά δευτερόλεπτα. Αλλά μια εβδομάδα ψαξίματος, πειραματισμών και βρισίματος το έλυσε και αυτό.
+         <b>It's amazing how</b>    even the most basic games can offer a plethora of challenges. This game, in particular, is
+            no exception. Let's delve into the task of enlarging the snake every time it consumes food. We should append
+            a square to
+            the end of snake's body, but where exactly is this position?
+            Besides, we must ensure that the recently spawned food doesn't emerge on the snake's body, as it would
+            remain obscured until the snake moves and exposes it.
+            This problem became a significant source of frustration, particularly as the snake grew longer and the food
+            remained concealed for several seconds. However, after persisting for a week, trying various solutions, and
+            even uttering a few colourful words, we eventually figured out how to overcome this challenge.
         </p>
         <br>
 
         <p class="post-text">
-            <b>Στο τέλος</b> προστέθηκαν original mame ήχοι, high score, η δυνατότητα να κάνεις pause το παιχνίδι κλπ
-            για να
-            μοιάζει όσο το δυνατόν περισσότερο με αυτό που όλοι θυμόμαστε. Το παιχνίδι είναι ελεύθερο για κατέβασμα και
-            εγκατάσταση <a href="https://1drv.ms/u/s!ApZtI3LNpx79gQSFHTOmQBp5JjgJ?e=odTWhx"
-                target="_blank"><b>εδώ</b></a> και
-            ολόκληρος ο κώδικας είναι διαθέσιμος <a href="https://github.com/a2926z/snake-game"
-                target="_blank"><b>εδώ</b></a>. Όπως
-            όλα τα τα exe αρχεία που ανεβαίνουν σε αυτό το blog, έτσι και αυτό έχει σκαναριστεί στο <a
-                href="https://www.virustotal.com/gui/home/upload" target="_blank"><b>virus total</b></a> και έχουν
-            σταλεί
-            false positives σε όσα antivirus το βλέπουν λανθασμένα σαν ιό, πριν γίνουν διαθέσιμα για κατέβασμα.
+          <b>At the end,</b>   original MAME sounds were added, as well as a high score feature and the ability to pause the
+            game, among other things, in order to make it as close as possible to what we all remember. The game is
+            available for free <a href="https://1drv.ms/u/s!ApZtI3LNpx79gQSFHTOmQBp5JjgJ?e=odTWhx"
+                target="_blank"><b>download in here</b></a> and the entire source code is available <a
+                href="https://github.com/a2926z/snake-game" target="_blank"><b>here</b></a>. Like all exe
+            files uploaded to this blog, it has been scanned on <a href="https://www.virustotal.com/gui/home/upload"
+                target="_blank"><b>VirusTotal</b></a> and some antivirus software has incorrectly
+            identified it as a virus, resulting in false positives before it became available for download.
         </p>
 
 

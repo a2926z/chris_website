@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>    
+<head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Art gallery database</title>
+    <title>Building a Fully Functional Art Gallery Database with Tkinter and SQLite in Python</title>
 
     <!-- Meta description -->
-    <meta name="description" content="Σε αυτή τη σελίδα θα δεις πως μπορείς να φτιάξεις μια βάση δεδομένων, με δυνατότητα εκατομμυρίων εγγραφών, εύκολα
-         και γρήγορα στην Python.">
+    <meta name="description"
+        content="In this post, I share my experience of completing the 150th and final exercise of 'Python by Example' by Nichola 
+    Lacey. The exercise involved creating a fully functional database for a hypothetical art gallery that enables users to search based on artist, medium, 
+    price, and add/remove art pieces or artist contact information. I used Tkinter for the GUI, SQLite for the database, and wrote 297 lines of Python 
+    3 code. Despite the challenges, the end result is impressive, and the code is available for anyone to use on any Python IDE.">
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -42,9 +45,12 @@
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 
     <!-- og metatag for fb -->
-    <meta property="og:title" content="Art gallery database. Πόσο δύσκολο είναι να φτιάξεις μια βάση δεδομένων ?" />
-    <meta property="og:description" content="Εδώ θα βρείς τον κώδικα για τη δημιουργία μιας βάσης δεδομένων, με δυνατότητα εκατομμυρίων
-    εγγραφών, εύκολα και γρήγορα στην Python." />
+    <meta property="og:title" content="Building a Fully Functional Art Gallery Database with Tkinter and SQLite in Python" />
+    <meta property="og:description"
+        content="In this post, I share my experience of completing the 150th and final exercise of 'Python by Example' by Nichola 
+    Lacey. The exercise involved creating a fully functional database for a hypothetical art gallery that enables users to search based on artist, medium, 
+    price, and add/remove art pieces or artist contact information. I used Tkinter for the GUI, SQLite for the database, and wrote 297 lines of Python 
+    3 code. Despite the challenges, the end result is impressive, and the code is available for anyone to use on any Python IDE." />
     <meta property="og:image" content="https://a2926z.github.io/chris_website/post-images/art-gallery-database1.webp" />
 
     <!-- Google analytics script -->
@@ -75,61 +81,61 @@
 
     <div class="post">
         <div class="post-title-header">
-            <h1 class="post-title">Art gallery database. Πόσο δύσκολο είναι να φτιάξεις μια βάση δεδομένων ?
+            <h1 class="post-title">Building a Fully Functional Art Gallery Database with Tkinter and SQLite in Python
             </h1>
         </div>
 
         <img src="../post-images/art-gallery-database1.webp" class="post-img-top">
 
         <h2 class="post-h2">
-            Σε αυτό το πόστ θα βρείς τον κώδικα για τη δημιουργία μιας βάσης δεδομένων, με δυνατότητα εκατομμυρίων
-            εγγραφών,
-            εύκολα και γρήγορα στην Python.
+            In this post, I share my experience of completing the 150th and final exercise of "Python by Example" by
+            Nichola
+            Lacey. The exercise involved creating a fully functional database for a hypothetical art gallery that
+            enables users to search based on artist, medium,
+            price, and add/remove art pieces or artist contact information. I used Tkinter for the GUI, SQLite for the
+            database, and wrote 297 lines of Python
+            3 code. Despite the challenges, the end result is impressive, and the code is available for anyone to use on
+            any Python IDE.
         </h2>
         <br>
 
         <p class="post-text">
-            <b>Και φτάνω</b> στην 150ή και τελευταία άσκηση, του εκπληκτικού βιβλίου <a href="https://www.amazon.co.uk/Python-Example-Nichola-Lacey/dp/1108716830/ref=sr_1_5?crid=1DL6LTZIYZ3NN&dchild
-                =1&keywords=python+by+example&qid=1614015793&sprefix=python+by%2Caps%2C162&sr=8-5"
-                target="_blank"><b>"Python by Example"</b></a>
-            της Nichola Lacey.
-            Εκεί ζητείται να φτιαχτεί μια πλήρως λειτουργική βάση δεδομένων, μιας υποθετικής γκαλερί, όπου σε ένα
-            γραφικό περιβάλλον θα μπορείς να κάνεις αναζήτηση με βάση 4 διαφορετικά κριτήρια (καλλιτέχνης, μέσο
-            ζωγραφικής, τιμή μεγαλύτερη ή μικρότερη από..) και θα μπορείς να προσθαφαιρείς έργα τέχνης ή στοιχεία
-            επικοινωνίας
-            καλλιτεχνών.
+          <b>I've just completed</b>   the 150th and final exercise of Nichola Lacey's fantastic book <a href="https://www.amazon.co.uk/Python-Example-Nichola-Lacey/dp/1108716830/ref=sr_1_5?crid=1DL6LTZIYZ3NN&dchild
+            =1&keywords=python+by+example&qid=1614015793&sprefix=python+by%2Caps%2C162&sr=8-5"
+                target="_blank"><b>"Python by Example"</b></a>. In
+            this exercise, I was tasked with creating a fully functional database for a hypothetical art gallery, which
+            allows users to search based on four different criteria - artist, medium, price (greater than or less than),
+            and also add or remove art pieces or artist contact information.
         </p>
         <br>
 
         <p class="post-text">
-            <b>Χρήσιμοποιήθηκε</b> η Tkinter για το γραφικό περιβάλλον, η SQLite για την βάση δεδομένων και 297 γραμμές
-            κώδικα
-            στην Python 3. Είναι το πρώτο project που φτιάχνεται κατά παραγγελία, έστω και σαν άσκηση ενός βιβλίου.
+           <b>To build this</b>  application, I used Tkinter for the graphical interface, SQLite for the database, and wrote
+            297 lines of Python 3 code. This was the first project that I've worked on by request, even if it was just
+            an exercise in a book.
         </p>
         <br>
 
         <p class="post-text">
-            <b>Δύσκολη</b> άσκηση για ένα νέο προγραμματιστή και το πρώτο πρόβλημα που έπρεπε να ξεπεραστεί είναι το πως
-            γίνεται ένα κουμπί
-            αναζήτησης να καταλήγει σε 4 διαφορετικά functions, αντί για 1. Μετά ήταν το γραφικό
-            περιβάλλον, που
-            θα μπουν τα κουμπιά, που η αναζήτηση κλπ.
+          <b>This was a challenging</b>   exercise for a new programmer, especially figuring out how to make a search button
+            call four different functions instead of just one. Then, I had to tackle the graphical interface, where the
+            search and other buttons would be placed etc.
         </p>
 
         <img src="../post-images/art-gallery-database2.webp" class="post-img" alt="">
 
         <p class="post-text">
-            <b>Το τελικό</b> αποτέλεσμα δεν είναι κακό για 2 ημερών δουλειά. Ασχέτως του λιτού γραφικού περιβάλλοντος, σημασία έχει οτι 
-            δημιουργήθηκε μια πλήρως λειτουργική βάση δεδομένων που μπορεί να διαχειριστεί εκατομμύρια εγγραφές με πλήρη αναζήτηση και βάλε-βγάλε
-            πρακτικά όλων των στοιχείων.
+          <b>The end result</b>   isn't that bad for just 2 days' worth of work. Despite the simple graphic environment, what
+            matters is that a fully functional database was created that can handle millions of records with complete
+            search and add/remove functionality for all elements.
         </p>
         <br>
 
         <p class="post-text">
-            <b>Ο κώδικας</b> για ολόκληρο το πρόγραμμα είναι <a
+          <b>The code for</b>   the entire program is available <a
                 href="https://github.com/a2926z/python_by_example_150_answered_challenges/blob/main/python_by_example.py"
-                target="_blank"><b>εδώ</b></a> σαν άσκηση "150" και τρέχει σε οποιοδήποτε IDE χρησιμοποιεί ο
-            καθένας για την Python, ωστε να την τροποποιήσει ανάλογα με τις ανάγκες του.
+                target="_blank"><b>here as exercise "150"</b></a> and can run on any Python IDE, allowing
+            users to modify it according to their needs.
         </p>
 
 

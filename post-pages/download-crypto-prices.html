@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>    
+<head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Τιμές κρυπτονομισμάτων στον υπολογιστή σου</title>
+    <title>Retrieve Current Cryptocurrency Prices with Coinmarketcap API and Excel</title>
 
     <!-- Meta description -->
-  <meta name="description"
-  content="Σε αυτό το post θα δεις βήμα-βήμα πως μπορείς να κατεβάσεις την τρέχουσα τιμή οποιουδήποτε κρυπτονομίσματος και να 
-  την αποθηκεύσεις στον υπολογιστή σου, χρησιμοποιώντας λίγες γραμμές Python.">
+    <meta name="description" content="Interested in tracking your cryptocurrency investments? Learn how to retrieve current cryptocurrency prices using 
+    the Coinmarketcap API and Excel spreadsheet. With just three essential pieces of information, you can access numerous cryptocurrency prices for free. 
+    Follow this guide to obtain your API key, retrieve the data, and save it to an Excel file.">
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -43,9 +43,11 @@
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 
     <!-- og metatag for fb -->
-    <meta property="og:title" content="Πως να κατεβάσεις τιμές κρυπτονομισμάτων και να τις περάσεις σε ένα αρχείο excel" />
-    <meta property="og:description" content="Εδώ θα δεις βήμα-βήμα πως μπορείς να κατεβάσεις την τρέχουσα τιμή οποιουδήποτε
-    κρυπτονομίσματος και να την αποθηκεύσεις στον υπολογιστή σου, χρησιμοποιώντας λίγες γραμμές Python." />
+    <meta property="og:title"
+        content="Retrieve Current Cryptocurrency Prices with Coinmarketcap API and Excel" />
+    <meta property="og:description" content="Interested in tracking your cryptocurrency investments? Learn how to retrieve current cryptocurrency prices 
+    using the Coinmarketcap API and Excel spreadsheet. With just three essential pieces of information, you can access numerous cryptocurrency prices for 
+    free. Follow this guide to obtain your API key, retrieve the data, and save it to an Excel file." />
     <meta property="og:image" content="https://a2926z.github.io/chris_website/post-images/coinmarketcap1.webp" />
 
     <!-- Google analytics script -->
@@ -75,71 +77,70 @@
 
     <div class="post">
         <div class="post-title-header">
-            <h1 class="post-title">Πως να κατεβάσεις τιμές κρυπτονομισμάτων και να τις περάσεις σε ένα αρχείο excel
+            <h1 class="post-title">Retrieve Current Cryptocurrency Prices with Coinmarketcap API and Excel
             </h1>
         </div>
 
         <img src="../post-images/coinmarketcap1.webp" class="post-img-top">
 
         <h2 class="post-h2">
-            Σε αυτό το post θα δεις βήμα-βήμα πως μπορείς να κατεβάσεις την τρέχουσα τιμή οποιουδήποτε
-            κρυπτονομίσματος και να την αποθηκεύσεις στον υπολογιστή σου, χρησιμοποιώντας λίγες γραμμές Python.
+            Interested in tracking your cryptocurrency investments? Learn how to retrieve current cryptocurrency prices
+            using the Coinmarketcap API and Excel spreadsheet. With just three essential pieces of information, you can
+            access numerous cryptocurrency prices for free. Follow this guide to obtain your API key, retrieve the data,
+            and save it to an Excel file.
         </h2>
         <br>
 
 
         <p class="post-text">
-            <b>Αν ασχολείσαι</b> με τα κρυπτονομίσματα (cryptocurrencies) και ιδιαίτερα αν επέλεξες να αγοράσεις μερικά
-            απ' αυτά, τότε πολύ πιθανόν να σε ενδιαφέρει το παρόν άρθρο πάρα πολύ. Ένα χρηματιστηριακό ρητό λέει: "Μην
-            αγνοείς ποτέ την μόδα, μπορεί να σε κάνει πλούσιο και ενίοτε πάμπλουτο". Έτσι και κάποιοι απο εμάς επιλέξαμε
-            να μην την αγνοήσουμε και αγοράσαμε μερικά (με χρήματα -ΠΑΝΤΑ- που περισσεύουν και δεν τα έχεις ανάγκη***).
+          <b>If you're involved</b>   in cryptocurrency, and especially if you've chosen to buy some, then you might be very
+            interested in this article. There's a financial saying that goes: "Never ignore a trend, it could make you
+            rich and sometimes very wealthy." Some of us have chosen not to ignore the trend and have bought some
+            (always with money that we have surplus and don't need***).
         </p>
         <br>
 
         <p class="post-text">
-            <b>Οπότε</b>   πρωταρχικός μου στόχος είναι να μπορώ να βλέπω άμεσα το κεφάλαιο μου
-            ανά πάσα στιγμή. Για να το καταφέρω αυτό, έφτιαξα ένα excelό-φυλλο και πέρασα την ποσότητα απο κάθε νόμισμα που έχω.
-            Μου έλειπε η τιμή και τσουπ, έτοιμο το κεφάλαιο.
+          <b>Well, my top priority</b>   is to have immediate access to my total assets at any given time. To accomplish this,
+            I devised an Excel spreadsheet and filled in the quantity of each currency I possess. Once I obtained the
+            missing values, my total capital was at my fingertips in a flash.
         </p>
         <br>
-        
+
 
         <p class="post-text">
-            <b>Ευτυχώς</b> για τις τιμές των κρύπτο έχει φροντίσει ένας ιστότοπος, που αν ασχολείσαι με τα κρύπτο
-            σίγουρα είναι
-            καλός σου φίλος, ο Coinmarketcap. Έχει ετοιμάσει μια API και εντελώς δωρεάν στην free έκδοση, παρέχει
-            τις τρέχουσες τιμών εκατοντάδων κρυπτονομισμάτων. Το μόνο που έχεις να κάνεις είναι να βγάλεις ένα κλειδί
-            (key) και να χρησιμοποιήσεις λίγο κώδικα που είναι έτοιμος σε αυτό το άρθρο.
+          <b>Thankfully, there's</b>   a website that manages cryptocurrency prices and acts as a valuable partner for anyone
+            keen on the world of cryptocurrencies: Coinmarketcap. They offer an API that's entirely free in the "free"
+            version, enabling users to access current prices of numerous cryptocurrencies. All it takes is to create a
+            key and use the code provided in this article.
         </p>
         <br>
         <p class="post-text">
-            <b>Πάμε</b> πρώτα για το κλειδί. Πηγαίνεις <a href="https://coinmarketcap.com/api/" target="_blank">
-                <b>εδώ</b> </a> και αφού κάνεις έναν λογαριασμό, πατάς το κουμπί 'GET YOUR API
-            KEY NOW". Αφού εκδοθεί το κλειδάκι σου το αντιγράφεις σε ένα txt και προχωράς.
+          <b>Let's start with</b>   the key. First, you need to go <a href="https://coinmarketcap.com/api/" target="_blank">
+                <b>here</b> </a> and create an account. Once you've done that, click on
+            the "GET YOUR API KEY NOW" button. After your key is issued, copy it to a txt file and proceed.
         </p>
 
         <img src="../post-images/coinmarketcap2.webp" class="post-img" alt="">
 
         <p class="post-text">
-            <b>Σχετικά</b> με τον κώδικα τώρα. Τρεις είναι οι βασικές πληροφορίες που καταχωρείς για να φτάσεις σε κάθε
-            τιμή:
-
+         <b>Alright, let's</b>    shift our focus to the code. To retrieve the present price for every cryptocurrency, you'll
+            need to provide three essential pieces of information.
         </p>
         <p class="post-text">
-            <b>1. headers.</b> Εδώ βάζεις το κλειδί που μόλις έβγαλες, μαζί με το φορμάτ του αρχείου που στην περίπτωση
-            μας
-            είναι αρχείο json.
+            <b>1. headers.</b> Here, you input the API key you just obtained, along with the file format you want the
+            data to be returned in (JSON).
         </p>
         <p class="post-text">
-            <b>2. params.</b> Εδώ καταχωρείς τα σύμβολα που σε ενδιαφέρουν και το νόμισμα του ζευγαριού. Επειδή έχω
-            κάνει όλες
-            τις αγορές μου σε EUR, το επιλέγω. Όσο για τα σύμβολα, πηγαίνεις σε <a
-                href="https://coinmarketcap.com/all/views/all/" target="_blank"><b>αυτή</b></a> την διεύθυνση και
-            επιλέγεις αυτά
-            που παρακολουθείς.
+            <b>2. params.</b> Here, you'll enter the symbols you're interested in and the currency pair. Since I've made
+            all my purchases
+            in EUR, I'll select that. As for the symbols, you'll go to <a
+                href="https://coinmarketcap.com/all/views/all/" target="_blank"><b>this address</b></a> and select the
+            ones you want to
+            track.
         </p>
         <p class="post-text">
-            <b>3. url.</b> Αυτή είναι στάνταρ, είναι η διεύθυνση της API
+            <b>3. url.</b> This is standard - it's the API address
             'https://pro-api.coinmarketcap.
             com/v1/
             cryptocurrency/quotes/latest'
@@ -147,7 +148,7 @@
         <br>
 
         <p class="post-text">
-            <b>Το request</b> που κάνεις επιστρέφει ένα αρχείο json της μορφής:
+         <b>The request you</b>    make will return a JSON file in the following format:
         </p>
 
         <pre class="post-text">
@@ -186,27 +187,22 @@
 
 
         <p class="post-text">
-            <b>οπότε</b> πρέπει να φτάσεις στην τιμή του κλειδιού που λέγεται price και να πάρεις το value του, όπως
-            γίνεται σε
-            κάθε λεξικό.
-        </p>
-
-        <p class="post-text">
-            <b>Φυσικά</b> μπορείς να πάρεις οποιαδήποτε χρήσιμη πληροφορία, όπως την μεταβολή 24 ωρών ή 90 ημερών κλπ..
+          <b>So, you need</b>   to find the key value called "price" and retrieve its value, just like you would with any
+            dictionary.  Of course, you can retrieve any useful information, such as the 24-hour or 90-day change, and so on.
         </p>
         <br>
 
         <p class="post-text">
-            <b>Παρακάτω</b> παραθέτω ολόκληρο τον κώδικα. Πρέπει να αλλάξει το κλειδί της API και η τοποθεσία που θέλεις
-            να
-            αποθηκευτεί το αρχείο excel. Στο συγκεκριμένο παράδειγμα εκτός απο την τρέχουσα τιμή, παίρνω και την 24ωρη
-            μεταβολή για τα 7+1 κρύπτο που παρακολουθώ.
+          <b>Below is the</b>   complete code. You need to change the API key and the location where you want to save the Excel
+            file. In this example, in addition to the current value, I am also retrieving the 24-hour change for the 7+1
+            cryptocurrencies I am tracking.
         </p>
         <br>
 
         <p class="post-text">
-            <b>*** Το παρόν δεν αποτελεί επενδυτική συμβουλή</b> , για επενδύσεις πρέπει να ακολουθείς τις οδηγίες μόνο
-            πιστοποιημένων για αυτό ατόμων.
+            <b>*** Please note that this is not investment or financial advice. For investments, you should do your own
+                research and follow the
+                instructions of certified individuals.</b>
         </p>
 
         <pre class="code post-text">

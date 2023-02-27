@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>    
+<head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Το πρώτο μου πρόγραμμα στην Python</title>
+    <title>My First Python Project: Creating a Simple Guessing Game</title>
 
     <!-- Meta description -->
-    <meta name="description"
-        content="Σε αυτή τη σελίδα θα βρείς τον κώδικα για ένα απλό παιχνιδι γραμμένο στην Python.">
+    <meta name="description" content="In this article, I share my experience creating a classic guessing game as my first Python project. I also discuss my challenges in 
+        converting the .py file to an executable (.exe) and sharing it with others. Learn about tools like PyInstaller and VirusTotal, as well as tips 
+        for sharing your program safely and effectively. Plus, find the full code for the game!">
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -42,9 +43,10 @@
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 
     <!-- og metatag for fb -->
-    <meta property="og:title" content="Το πρώτο μου πρόγραμμα στην Python!.." />
-    <meta property="og:description" content="Εδώ θα βρείς τον κώδικα για ένα απλό παιχνιδι γραμμένο στην Python, που είναι κλασικό 
-    πρόβλημα σε όλα τα μαθήματα αρχάριων." />
+    <meta property="og:title" content="My First Python Project: Creating a Simple Guessing Game" />
+    <meta property="og:description" content="In this article, I share my experience creating a classic guessing game as my first Python project. I also 
+    discuss my challenges in converting the .py file to an executable (.exe) and sharing it with others. Learn about tools like PyInstaller and VirusTotal, 
+    as well as tips for sharing your program safely and effectively. Plus, find the full code for the game!" />
     <meta property="og:image" content="https://a2926z.github.io/chris_website/post-images/python-first-program1.webp" />
 
     <!-- Google analytics script -->
@@ -75,82 +77,83 @@
 
     <div class="post">
         <div class="post-title-header">
-            <h1 class="post-title">Το πρώτο μου πρόγραμμα στην Python!..
+            <h1 class="post-title">My First Python Project: Creating a Simple Guessing Game
             </h1>
         </div>
 
         <img src="../post-images/python-first-program1.webp" class="post-img-top">
 
         <h2 class="post-h2">
-            Σε αυτή τη σελίδα θα βρείς τον κώδικα για ένα απλό παιχνιδι γραμμένο στην Python, που είναι κλασικό πρόβλημα
-            σε όλα τα
-            μαθήματα αρχάριων.
+            In this article, I share my experience creating a classic guessing game as my first Python project. I also
+            discuss my challenges in converting the .py file to an executable (.exe) and sharing it with others. Learn
+            about tools like PyInstaller and VirusTotal, as well as tips for sharing your program safely and
+            effectively. Plus, find the full code for the game!
         </h2>
         <br>
 
         <p class="post-text">
-            <b>Το πρώτο μου</b> project στην python ήταν το κλασικό απλό παιχνιδάκι που φτιάχνουν όσοι ξεκινάνε την
-            γλώσσα. Ο
-            υπολογιστής διαλέγει τυχαία έναν αριθμό απο το 1 ως το 99 και ο χρήστης έχει 7 προσπάθειες για να τον βρει.
-            Το 7
-            το υπολόγισα γιατί είναι ο αριθμός που σου επιτρέπει να κερδίζεις πάντα, αν πηγαίνεις στην μέση των
-            υποδείξεων κάθε φορά, π.χ ξεκινάς με το 50 και εάν ο υπολογιστής σου πει "επάνω", πηγαίνεις στο 75 κ.ο.κ
+          <b>My first Python project</b>   was a classic simple game that many beginners create when learning the language. The
+            computer randomly selects a number from 1 to 99, and the user has seven attempts to guess it. I chose seven
+            because it allows you to always win if you go to the middle of the range each time. For example, you start
+            with 50, and if the computer says "higher," you go to 75, and so on.
         </p>
         <br>
 
         <p class="post-text">
-            <b> Ήταν</b> η πρώτη φορά που χρησιμοποίησα στα σοβαρά την while loop καθώς και η πρώτη φορά που
-            χρησιμοποίησα
-            function που τρέχει όποτε την καλείς. Επίσης ήταν η πρώτη φορά που μετέτρεψα .py αρχείο σε exe για να τρέχει
-            και σε υπολογιστές ατόμων που δεν έχουν εγκατεστημένη την python στον υπολογιστή τους.
+          <b>This was the</b>   first time I used while loops and functions that run when called. It was also my first time
+            converting a .py file to an executable (.exe) to run on computers without Python installed.
         </p>
 
         <img src="../post-images/python-first-program2.webp" class="post-img" alt="">
 
         <p class="post-text">
-            <b>Για το</b> τελευταίο χρησιμοποιήθηκε το γνωστό <b>pyinstaller</b>  που είναι αρκετά μπελαλίδικο γιατί κατά πρώτον
-            δεν
-            φτιάχνει ένα και μοναδικό αρχείο exe στην περίπτωση που έχεις εικόνες και άλλα αρχεία στο πρόγραμμα σου,
-            οπότε πρέπει να τα κουβαλάς όλα αυτά μαζί με το exe, σε ένα αρχείο rar ή κάτι τέτοιο.
+         <b>For this, I used</b>    the well-known PyInstaller, which can be quite troublesome. Firstly, it doesn't create a
+            single .exe file if you have images or other files in your program, so you need to carry all of them
+            together with the .exe in a .rar file or something similar.
         </p>
         <br>
 
         <p class="post-text">
-            <b>Κατά</b> δεύτερον μερικά antivirus συμπεριλαμβανομένης της Google, βλέπουν λανθασμένα το exe σου σαν ιό.
-            Η
-            Google δεν είναι antivirus αλλά δεν σε αφήνει να στείλεις το exe μέσω mail, ούτε καν να το μοιράσεις μέσω
-            του
-            google drive.
+          <b>Secondly,</b>   some antivirus software, including Google's, incorrectly identify your .exe file as a virus.
+            Google is not an antivirus, but it won't allow you to send the .exe file via email or even share it through
+            Google Drive.
         </p>
         <br>
 
         <p class="post-text">
-            <b>Η λύση?</b> Κάνεις 2 πράγματα. Πρώτον ανεβάζεις το αρχείο στο <a
-                href="https://www.virustotal.com/gui/home/upload" target="_blank"> <b>virus total</b> </a>, βλέπεις ποια
-            antivirus το βλέπουν σαν ιό και στέλνεις false positive, τουλάχιστον στα μεγάλα antivirus που
-            χρησιμοποιούνται ευρέως.
+          <b>The solution?</b>   You can do two things. First, upload the file to <a
+                href="https://www.virustotal.com/gui/home/upload" target="_blank"> <b>VirusTotal</b> </a>,
+            see which antiviruses recognize it as a virus, and send a false positive report, at least to the major
+            antiviruses widely used.
         </p>
-  
+
 
         <img src="../post-images/python-first-program3.webp" class="post-img" alt="">
 
         <p class="post-text">
-            <b>Δεύτερον</b> συμπιέζεις το πρόγραμμα που θέλεις να μοιράσεις με κωδικό και μετά το ανεβάζεις στο google
-            drive ή σε οποιονδήποτε server έχεις για διαμοιρασμό. Προσωπικά χρησιμοποιώ το OneDrive της Microsoft, που
-            δίνει 5 GB δωρεάν χώρου και είναι μια χαρά.
+          <b>To share a program,</b>   first compress it with a password and then upload it to Google Drive or any server you
+            have for sharing. Personally, I use Microsoft's OneDrive, which provides 5 GB of free space and works great.
         </p>
         <br>
 
         <p class="post-text">
-            <b>Όποιος</b> ενδιαφέρεται, μπορεί να κατεβάσει το αρχείο exe του παιχνιδιού <a
-                href="https://1drv.ms/u/s!ApZtI3LNpx79gQLjhYH9g54P7y3E?e=43r7UY" target="_blank"><b>εδώ</b></a> , δεν
-            χρειάζεται εγκατάσταση, είναι <b>απόλυτα ασφαλές</b> αν και η Google μπορεί να το εμφανίσει σαν uncommon
-            download.
+          <b>If you're interested,</b>   you can download the game's exe file <a
+                href="https://1drv.ms/u/s!ApZtI3LNpx79gQLjhYH9g54P7y3E?e=43r7UY" target="_blank"><b>here</b></a>.
+            It doesn't require installation and is completely safe, although Google may flag it as an uncommon download.
         </p>
         <br>
 
         <p class="post-text">
-            <b>Παρακάτω</b> είναι ο πλήρης κώδικας αυτού του παρθενικού προγράμματος.
+          <b>Overall, this project</b>   was a great learning experience for me. It allowed me to gain familiarity with
+            important concepts such as loops, functions, and executable file conversion. I also learned about some
+            potential challenges in sharing my program with others, such as antivirus software false positives. However,
+            by using tools like VirusTotal and password-protecting compressed files, I was able to overcome these
+            challenges and successfully share my project with others.
+        </p>
+        <br>
+
+        <p class="post-text">
+          <b>Below is the</b>   full code for my first program.
         </p>
 
         <pre class="post-text">

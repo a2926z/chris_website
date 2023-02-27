@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>    
+<head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Πόσα λεπτά πέρασαν απο την γέννηση μου?</title>
+    <title>Calculate Your Age in Minutes with a Simple Python Script</title>
 
     <!-- Meta description -->
-    <meta name="description" content="Σε αυτή τη σελίδα θα βρείς τον κώδικα για τον ακριβή υπολογισμό της ηλικίας ενός ανθρώπου, πόσους μήνες, 
-        εβδομάδες, ημέρες, ώρες ή λεπτά είναι ζωντανός.">
+    <meta name="description" content="Are you curious about how many minutes you've been alive? Check out this easy-to-use Python script that calculates 
+    your age in minutes. With built-in error handling, you can ensure accurate results every time. Plus, download the executable file to use on your own 
+    computer. Don't miss out on this fun and informative tool for programmers and non-programmers alike!">
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -42,9 +43,11 @@
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 
     <!-- og metatag for fb -->
-    <meta property="og:title" content="Πόσα λεπτά πέρασαν απο την γέννηση μου ?" />
-    <meta property="og:description" content="Εδώ θα βρείς τον κώδικα για τον ακριβή υπολογισμό της ηλικίας ενός ανθρώπου, πόσους μήνες,
-    εβδομάδες, ημέρες, ώρες ή λεπτά πέρασαν απο την ημερομηνία γέννησης του." />
+    <meta property="og:title" content="Calculate Your Age in Minutes with a Simple Python Script" />
+    <meta property="og:description"
+        content="Are you curious about how many minutes you've been alive? Check out this easy-to-use Python script that 
+    calculates your age in minutes. With built-in error handling, you can ensure accurate results every time. Plus, download the executable file to use
+     on your own computer. Don't miss out on this fun and informative tool for programmers and non-programmers alike!" />
     <meta property="og:image" content="https://a2926z.github.io/chris_website/post-images/how-old-are-you1.webp" />
 
     <!-- Google analytics script -->
@@ -75,65 +78,62 @@
 
     <div class="post">
         <div class="post-title-header">
-            <h1 class="post-title">Πόσα λεπτά πέρασαν απο την γέννηση μου?
+            <h1 class="post-title">Calculate Your Age in Minutes with a Simple Python Script
             </h1>
         </div>
 
         <img src="../post-images/how-old-are-you1.webp" class="post-img-top">
 
         <h2 class="post-h2">
-            Σε αυτή τη σελίδα θα βρείς τον κώδικα για τον ακριβή υπολογισμό της ηλικίας ενός ανθρώπου, πόσους μήνες,
-            εβδομάδες, ημέρες, ώρες ή λεπτά πέρασαν απο την ημερομηνία γέννησης του.
+            Are you curious about how many minutes you've been alive? Check out this easy-to-use Python script that
+            calculates your age in minutes. With built-in error handling, you can ensure accurate results every time.
+            Plus, download the executable file to use on your own computer. Don't miss out on this fun and informative
+            tool for programmers and non-programmers alike!
         </h2>
         <br>
 
         <p class="post-text">
-            <b>Πόσα λεπτά</b> πέρασαν απο την γέννηση μου? Πόσες εβδομάδες ή μέρες υπάρχω? Με αυτό το απλό σκριπτάκι
-            απαντώνται
-            όλα.
-            Βάζεις ημερομηνία, μήνα και έτος γέννησης και το daytime στα λέει όλα.
+          <b>How many minutes</b>   have passed since my birth? How many weeks or days have I existed? This simple script
+            answers all of that. You input your date of birth - day, month, and year - and the script tells you
+            everything.
         </p>
         <br>
 
         <p class="post-text">
-            <b>Για παράδειγμα</b> κάποιος που γεννήθηκε στις 1 Μαΐου του 1980 έχει ζήσει 14.904 ημέρες ή 21.461.760
-            λεπτά. Αν
-            δεν είναι αυτό ενδιαφέρουσα πληροφορία, τότε τι είναι?
+          <b>For example,</b>   someone born on May 1st, 1980 has lived 14,904 days or 21,461,760 minutes. If that isn't
+            interesting information, then what is?
         </p>
         <img src="../post-images/how-old-are-you3.webp" class="post-img" alt="">
 
 
         <p class="post-text">
-            <b>Στο κομμάτι</b> του κώδικα τώρα, πέρα απο την χρήση της <b>daytime</b>  που είναι σχετικά απλή, προσπάθησα να
-            αποκλείσω
-            όλα τα πιθανά λάθη που θα μπορούσαν να καταχωρηθούν ώστε να μην κρασάρει το πρόγραμμα.
+          <b>In the code,</b>   in addition to using the relatively simple "daytime," I tried to exclude all possible errors
+            that could be recorded so that the program wouldn't crash.
         </p>
         <br>
 
         <p class="post-text">
-            <b>Για παράδειγμα</b> αν κάποιος βάλει κείμενο ή σύμβολο αντί για αριθμό, η python θα έβγαζε error και το
-            παράθυρο
-            θα έκλεινε. Τώρα αν κάποιος βάλει ότι γεννήθηκε στις 32 του μηνός, θα του βγάλει ένα ευγενικό μήνυμα λάθους
-            ώστε να καταχωρήσει την κανονική ημερομηνία.
+         <b>For example,</b>    if someone enters text or symbols instead of a number, Python would produce an error and the
+            window would close. Now, if someone enters that they were born on the 32nd of the month, the program will
+            give them a polite error message asking them to enter the correct date.
         </p>
         <br>
 
         <p class="post-text">
-            <b>Αυτό γίνεται</b> με while loops σε συνδυασμό με try except για συγκεκριμένα λάθη που μπορούν να
-            προκύψουν. Και
-            είναι χρέος ενός καλού προγραμματιστή να αποκλείει μελλοντικές λανθασμένες καταχωρήσεις απο users και να
-            δυναμώνει το πρόγραμμα. Γιατί τίποτα χειρότερο απο κάτι που δεν δουλεύει σωστά ή κρασάρει όλη την ώρα..
+           <b>This is done</b>  using while loops in combination with try-except for specific errors that may arise. It is the
+            duty of a good programmer to exclude future incorrect entries from users and strengthen the program. Because
+            nothing is worse than something that doesn't work properly or crashes all the time.
         </p>
 
         <img src="../post-images/how-old-are-you2.webp" class="post-img" alt="">
 
         <p class="post-text">
-            <b>Ακολουθεί</b> ο κώδικας όλου του προγράμματος. Όποιος ενδιαφέρεται μπορεί να κατεβάσει το exe <a
-                href="https://1drv.ms/u/s!ApZtI3LNpx79gQNjyGQpKuaFBx6z?e=c6NYHo" target="_blank"><b>εδώ</b></a>. Το
-            exe <b>δεν είναι ιός</b> και όπως έγραψα σε άλλο ποστ, είναι ελεγμένο στο <a
-                href="https://www.virustotal.com/gui/home/upload" target="_blank"><b>virus total</b></a> αλλά ενδέχεται
-            η Google να το
-            εμφανίσει σαν uncommon download.
+          <b>The entire program</b>   code is below. Anyone interested can download the exe <a
+                href="https://1drv.ms/u/s!ApZtI3LNpx79gQNjyGQpKuaFBx6z?e=c6NYHo" target="_blank"><b>here</b></a>. The
+            exe is not a virus, and as
+            I wrote in another post, it has been checked on <a href="https://www.virustotal.com/gui/home/upload"
+                target="_blank"><b>Virus Total</b></a>, but Google may display it as an uncommon
+            download.
         </p>
 
 

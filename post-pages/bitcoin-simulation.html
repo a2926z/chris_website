@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>    
+<head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Προσομοίωση Bitcoin Και Άλλων Crypto. Τι Θα Κάνουν Στο Μέλλον?</title>
+    <title>Can Random Walk Predict Cryptocurrency Prices? A Look at Bitcoin's Past and Future</title>
 
     <!-- Meta description -->
-    <meta name="description"
-        content="Σε αυτή τη σελίδα θα βρείς χρήσιμες πληροφορίες για το μέλλον του Bitcoin και άλλων 
-    κρυπτονομισμάτων. Εφαρμόσαμε το μοναδικό τρόπο 'πρόβλεψης' μελλοντικών τιμών αξιών και παρουσιάζουμε τα αποτελέσματα.">
+    <meta name="description" content="Can the concept of random walks combined with past data provide answers about the future of cryptocurrency prices? This post explores 
+        Bitcoin's past growth and analyzes a simulation of future returns based on a specific coefficient of change. Find out what the simulation reveals
+         about potential returns and the crucial prerequisites that must be met for the predictions to hold true.">
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -43,10 +43,11 @@
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 
     <!-- og metatag for fb -->
-    <meta property="og:title" content="Προσομοίωση Bitcoin και άλλων crypto. Τι θα κάνουν στο μέλλον ?" />
-    <meta property="og:description" content='Εδώ θα βρείς χρήσιμες πληροφορίες για το μέλλον του Bitcoin και άλλων
-    κρυπτονομισμάτων. Εφαρμόσαμε το μοναδικό τρόπο "πρόβλεψης" μελλοντικών τιμών αξιών και παρουσιάζουμε τα
-    αποτελέσματα.' />
+    <meta property="og:title" content="Can Random Walk Predict Cryptocurrency Prices? A Look at Bitcoin's Past and Future" />
+    <meta property="og:description"
+        content="Can the concept of random walks combined with past data provide answers about the future of cryptocurrency 
+    prices? This post explores Bitcoin's past growth and analyzes a simulation of future returns based on a specific coefficient of change. Find out what 
+    the simulation reveals about potential returns and the crucial prerequisites that must be met for the predictions to hold true." />
     <meta property="og:image" content="https://a2926z.github.io/chris_website/post-images/bitcoin-simulation8.webp" />
 
     <!-- Google analytics script -->
@@ -77,63 +78,60 @@
 
     <div class="post">
         <div class="post-title-header">
-            <h1 class="post-title">Προσομοίωση Bitcoin και άλλων crypto. Τι θα κάνουν στο μέλλον? Ένας τυχαίος περίπατος
-                απαντά.
+            <h1 class="post-title">Can Random Walk Predict Cryptocurrency Prices? A Look at Bitcoin's Past and Future
             </h1>
         </div>
 
         <img src="../post-images/bitcoin-simulation8.webp" class="post-img-top">
 
         <h2 class="post-h2">
-            Σε αυτό το πόστ θα βρείς χρήσιμες πληροφορίες για το μέλλον του Bitcoin και άλλων
-            κρυπτονομισμάτων. Εφαρμόσαμε το μοναδικό τρόπο "πρόβλεψης" μελλοντικών τιμών αξιών και παρουσιάζουμε τα
-            αποτελέσματα.
+            Can the concept of random walks combined with past data provide answers about the future of cryptocurrency
+            prices? This post explores Bitcoin's past growth and analyzes a simulation of future returns based on a
+            specific coefficient of change. Find out what the simulation reveals about potential returns and the crucial
+            prerequisites that must be met for the predictions to hold true.
         </h2>
         <br>
 
         <p class="post-text">
-            <b>Ο τυχαίος</b> περίπατος (ή random walk) είναι γνωστός σε όσους έχουν την ατυχία, ή την τύχη, να
-            ασχολούνται με
-            την τεχνητή νοημοσύνη. Οι γνωρίζοντες ξέρουν ότι πολύ δύσκολα σήμερα (Φεβ-2022) οποιοδήποτε μοντέλο AI
-            μπορεί να χτυπήσει το naive model. Και τι είναι το naive model? Η ''πρόβλεψη'' ενός αλγόριθμου ότι η επόμενη
-            τιμή θα είναι ίδια με την προηγούμενη. Σε τόσο εμβρυακό στάδιο βρίσκεται η τεχνητή νοημοσύνη σχετικά με την
-            πρόβλεψη χρηματιστηριακών τιμών.
+         <b>The concept of a random walk</b>    is familiar to those who have the misfortune, or perhaps fortune, of dealing
+            with artificial intelligence. Those in the know are aware that today (as of February 2022), it is highly
+            unlikely that any AI model can beat the naive model. And what is the naive model? It's the "prediction" of
+            an algorithm that the next value will be the same as the previous one. This is how embryonic AI currently is
+            with regard to predicting stock prices.
         </p>
         <br>
 
         <p class="post-text">
-            <b>Οπότε</b> ο τυχαίος περίπατος, δηλ η τυχαία μεταβολή των τιμών, μπορεί υπό προϋποθέσεις να δώσει
-            απαντήσεις για
-            το μέλλον, αν συνδυαστεί με το παρελθόν. Ποιές είναι οι προϋποθέσεις? Πάμε να δούμε..
+          <b>Therefore, under</b>   certain circumstances, a random walk, i.e. the random fluctuation of prices, can provide
+            answers about the future if combined with the past. So what are these circumstances? Let's take a look...
         </p>
 
         <img src="../post-images/bitcoin-simulation2.webp" class="post-img" alt="">
 
         <p class="post-text">
-            <b>Προϋπόθεση 1η:</b> Η τιμή του Bitcoin τον Ιούλιο του 2010 ήταν 1 λεπτό του δολαρίου. Δέκα χρόνια μετά
-            ήταν περί
-            τις 10.000 έχοντας όμως σαν υψηλότερο υψηλό τις 20.000 στο τέλος του 2017. Αγνοούμε το υψηλότερο των 20
-            χιλιάδων και επικεντρωνόμαστε στο κλείσιμο των 10 χιλιάδων.
+            <b>Requirement 1:</b> First, let's establish some facts about Bitcoin. In July 2010, the value of Bitcoin
+            was only one cent of a dollar. However, ten years later, its value had skyrocketed to around $10,000, with a
+            peak high of $20,000 at the end of 2017. For the purposes of our analysis, we'll focus on the closing value
+            of $10,000 and ignore the peak high of $20,000.
         </p>
         <br>
 
         <p class="post-text">
-            <b>Ακολούθως</b> "παίζουμε" με τον συντελεστή μεταβολής r. Ο συντελεστής μεταβολής r είναι αυτός που
-            μεταβάλλει καθημερινά τις τιμές μέσα σε ένα όριο. (Παραδείγματος χάριν, r = 5%, η ημερήσια διακύμανση δεν
-            μπορεί να ξεπεράσει το +5% ή το -5%). Μεγαλύτερος συντελεστής συνεπάγεται και μεγαλύτερες μεταβολές, άρα
-            και πιο ακραίες τιμές. Η πρώτη προϋπόθεση αφορά μόνο στο εξής: στην προσομοίωση καμία τιμή να μην
-            ξεπερνά αυτή του Bitcoin. Κοινώς βάζουμε το Bitcoin σαν ταβάνι που δεν θα ξεπεραστεί ποτέ και απο κανένα
-            κρύπτο.
+          <b>Next, we'll examine</b>   the daily fluctuation rate, which is determined by a coefficient of change, denoted as
+            "r". This coefficient regulates the daily price fluctuations within a certain range. For instance, if r =
+            5%, the daily fluctuation cannot exceed +5% or -5%. A higher coefficient results in greater price
+            volatility, which can lead to more extreme prices. However, we'll impose one condition: in our simulation,
+            no price can exceed that of Bitcoin. Essentially, we'll treat Bitcoin as a ceiling that cannot be surpassed
+            by any other cryptocurrency.
         </p>
         <br>
 
         <p class="post-text">
-            <b>Για την</b> πρώτη προϋπόθεση έτρεξε 20 φορές, μια προσομοίωση 10.000 κρυπτονομισμάτων με r απο 1% εως
-            10% και αρχική τιμή όλων το 1 λεπτό.
-            Τελικά το <b>4,1%</b> έβγαλε τον πολυπόθητο μέσο όρο των 10.000 δολαρίων, 10 χρόνια μετά, για το νόμισμα με
-            την μεγαλύτερη απόδοση (Bitcoin). Οπότε βγάλαμε το εύρος
-            μεταβολής
-            που οδήγησε το Bitcoin στην ξέφρενη πορεία της δεκαετίας 2010-2020.
+          <b>To meet this condition,</b>   we ran a simulation twenty times, with 10,000 cryptocurrencies each, and varied the
+            coefficient of change from 1% to 10%, starting at a value of one cent. After completing the simulations, we
+            found that the cryptocurrency with the highest return rate (Bitcoin) achieved the coveted average value of
+            $10,000, ten years later, with a coefficient of change of 4.1%. This allowed us to determine the range of
+            fluctuations that led Bitcoin to its frenzied growth during the decade from 2010 to 2020.
         </p>
 
         <img src="../post-images/bitcoin-simulation4.webp" class="post-img" alt="">
@@ -148,117 +146,108 @@
         <br> -->
 
         <p class="post-text">
-            <b>Αφού</b> βρέθηκε ακριβώς ο συντελεστής που καθόρισε την απόδοση του Bitcoin περνάμε στην 2η
-            προϋπόθεση.
+         <b>Now that we have</b>    found the exact coefficient that determined the performance of Bitcoin, we move on to the
+            second requirement.
         </p>
         <br>
 
         <p class="post-text">
-            <b>Προϋπόθεση 2η:</b> Ο συντελεστής r που καθοδηγούσε το Bitcoin στα 10 χρόνια της ενηλικίωσης του, θα
-            συνεχίσει να το κάνει και στο μέλλον.
+            <b>Requirement 2:</b> The coefficient "r" that guided Bitcoin during its 10-year maturation period will
+            continue to do so in the future.
         </p>
         <br>
 
         <p class="post-text">
-            <b>Αυτή</b> η προϋπόθεση σηκώνει πολύ κουβέντα γιατί μπορεί κάλλιστα να μην υπάρχει Bitcoin σε 10
-            χρόνια ή
-            να έχει επιστρέψει στο 1 λεπτό ή να μην υπάρχει καν πλανήτης και άνθρωποι πάνω του σε θέση να το
-            χρησιμοποιήσουν. Αλλά εδώ χρησιμοποιείται το "έστω ότι".
+         <b>This requirement</b>    generates much discussion because Bitcoin may not exist in 10 years or may have returned to
+            being worth only one cent, or there may not even be a planet with people on it capable of using it. However,
+            the phrase "let's assume that" is used here.
         </p>
         <br>
 
-        
+
 
         <p class="post-text">
-            <b>Για την</b> 2η προϋπόθεση, πήρα τον χρυσό συντελεστή r (4,1 %) που θεωρητικά είναι σε ισχύ αφού το
-            Bitcoin είναι
-            πραγματικότητα αυτή την στιγμή που μιλάμε, και έτρεξα μια προσομοίωση 100.000 νομισμάτων με αρχική τιμή το
-            ένα λεπτό, για 5 - 10 - 15 και 20 χρόνια στο μέλλον, με βάση το έτος 2010.
+          <b>For the second</b>   requirement, I took the golden coefficient "r" (4.1%) that is theoretically in effect since
+            Bitcoin is currently a reality, and ran a simulation of 100,000 coins with an initial value of one cent for
+            5, 10, 15, and 20 years in the future, based on the year 2010.
         </p>
         <br>
 
         <p class="post-text">
-            <b>Τα αποτελέσματα</b> φαίνονται στο πινακάκι της φωτογραφίας παρακάτω. Η επεξήγηση των στηλών είναι η εξής:
+           <b>The results are</b>  shown in the table below. The column explanations are as follows:
         </p>
 
         <img src="../post-images/bitcoin-simulation5.webp" class="post-img" alt="">
 
         <p class="post-text">
-            <b>median:</b> η διάμεσος. Η τελική τιμή των κρύπτο σορτάρεται σε αύξουσα σειρά και βλέπουμε την τιμή 50.000
-            που
-            είναι η διάμεσος. Για παράδειγμα: στα 10 χρόνια η διάμεσος είναι 0,38 που σημαίνει οτι αν επιλέξεις τυχαία
-            ένα κρύπτο σήμερα, η μέση πιθανότητα λέει οτι σε 10 χρόνια η αξία του θα είναι 38 φορές μεγαλύτερη.
+            <b>median:</b> The median is the middle value when the sorted list of crypto values is arranged in ascending
+            order. For example, if we take a look at a 10-year period, the median is 0.38, which means that if you
+            randomly select a cryptocurrency today, there is a good chance that its value will increase by 38 times in
+            10 years.
         </p>
         <br>
 
         <p class="post-text">
-            <b>no_gains:</b> η πιθανότητα να μην έχεις καθόλου κέρδη, δηλ το κρύπτο να έχει παραμείνει στο 1 λεπτό ή να
-            έχει
-            μηδενίσει.
+            <b>no_gains:</b> This refers to the probability of not having any gains at all, where the value of the
+            cryptocurrency remains the same or becomes zero.
         </p>
         <br>
 
         <p class="post-text">
-            <b>>x10 ή >x1000:</b> η πιθανότητα να έχεις πολλαπλασιάσει το κεφάλαιο σου x10 ή x1000 στα αντίστοιχα χρόνια
+            <b>>x10 ή >x1000:</b> This refers to the probability of multiplying your investment by 10 or 1000 times in
+            the respective years.
         </p>
         <br>
 
         <p class="post-text">
-            <b>BTC PRED:</b> Η πρόβλεψη για το Bitcoin. Η πρόβλεψη για τα 15 ή 20 χρόνια που έδωσε το
-            μοντέλο αφορά τα έτη 2025 και 2030 αντίστοιχα.
+            <b>BTC PRED:</b> This is a prediction for Bitcoin. The model's prediction for the years 2025 and 2030 refers
+            to a 15-year and 20-year period, respectively.
         </p>
 
         <img src="../post-images/bitcoin-simulation6.webp" class="post-img" alt="">
 
         <p class="post-text">
-            <b>Μερικά</b> απο τα στοιχεία της προσομοίωσης είναι πραγματικά εντυπωσιακά, όπως η πιθανότητα κατά 54,5% σε
-            20
-            χρόνια το αρχικό σου κεφάλαιο να έχει 1000-πλασιαστεί. Φυσικά εντυπωσιακότερο ακόμα είναι το γεγονός οτι ένα
-            ψηφιακό νόμισμα χωρίς καμιά εσωτερική αξία, μπορεί να πάει απο το 1 λεπτό στα 10.000 δολάρια μέσα σε μόλις
-            10 χρόνια, οπότε δεν προκαλεί ιδιαίτερη εντύπωση, το 2025 να βρίσκεται στις 530.000 δολάρια.
+          <b>Some of the simulation's</b>   elements are truly impressive, such as the likelihood of your initial capital being
+            multiplied by 1000 in 20 years with a 54.5% probability. Even more impressive is the fact that a digital
+            currency with no intrinsic value can go from $0.01 to $10,000 in just 10 years, so it's not surprising that
+            it
+            could reach $530,000 in 2025.
         </p>
         <br>
 
         <p class="post-text">
-            <b>Το άρθρο αυτό κλείνει με την 3η και βασικότερη προϋπόθεση όλων:</b> Τα κρύπτο να παραμείνουν mainstream
-            και να
-            μην αντικατασταθούν απο κάτι άλλο. Ή να μην απαγορευτούν παγκοσμίως. Αν συμβεί κάτι απο τα παραπάνω,
-            εξυπακούεται ότι η παραπάνω προσομοίωση είναι κενή περιεχομένου. Η μόδα και η δυναμική του Bitcoin είναι
-            αυτή που το έφερε εδώ που είναι σήμερα. Αν κάτι απ' αυτά εκλείψει ή επιβληθούν περιοριστικοί νόμοι
-            παγκοσμίως, το Bitcoin και τα κρύπτο γενικότερα θα ατονήσουν και κατόπιν θα εξαφανιστούν. Σήμερα δεν
-            φαίνεται κάτι τετοιο αλλα τα δεδομένα αλλάζουν με ιλιγγιώδη ταχύτητα, οπότε τα μόνα βεβαια συνεχίζουν να
-            είναι ο θάνατος και οι φόροι.
+          <b>This article concludes</b>   with the third and most crucial prerequisite of all: cryptocurrencies remaining
+            mainstream and not being replaced by something else, or not being globally banned. If any of these things
+            happen, the above simulation becomes irrelevant. Bitcoin's popularity and dynamic is what brought it to
+            where it is today. If anything changes, or if restrictive laws are imposed globally, Bitcoin and
+            cryptocurrencies in general will weaken and eventually disappear. At present, there is no sign of such a
+            thing happening, but data changes rapidly, so the only certain things are death and taxes.
         </p>
         <br>
 
         <p class="post-text">
-            <b>Το αρχείο</b> xlsx σε όποιον ενδιαφέρεται να δει ολόκληρη την προσομοίωση, ελεύθερο για κατέβασμα <a
-                href="https://1drv.ms/u/s!ApZtI3LNpx79fh-_ILau7Lj_Cq0?e=zOZWEa" target="_blank"><b>εδώ</b></a>.
+          <b>The xlsx file</b>   with the entire simulation can be downloaded for free <a
+                href="https://1drv.ms/u/s!ApZtI3LNpx79fh-_ILau7Lj_Cq0?e=zOZWEa" target="_blank"><b>here</b></a> for
+            anyone interested.
         </p>
 
         <img src="../post-images/bitcoin-simulation7.webp" class="post-img" alt="">
 
         <p class="post-text">
-            <b>Jan 2023 Update:</b> 1 σχεδόν χρόνο μετά το τρέξιμο της παραπάνω προσομοίωσης έχουν γίνει πολλά στον πλανήτη γη,
-            απο πολέμους και καταστροφές, μέχρι καθολική απαγόρευση των κρύπτο σε μεγάλες αγορές όπως η Κίνα και αναδιάταξη
-            του παγκόσμιου status quo. Το Bitcoin είναι ακόμα εδώ, ζωντανό
-            αλλά πληγωμένο. Ο συντελεστής r της δεκαετίας 2010-2020, φαίνεται να το έχει εγκαταλείψει για τα
-            καλά και πολύ δύσκολα θα φτάσει τις τιμές της προσομοίωσης. Εδώ θα είμαστε τέλος του 2025 και '30, να δούμε
-            τις τρέχουσες τότε τιμές, να αναπροσαρμόσουμε συντελεστές και να βγάλουμε τα συμπεράσματα μας.
+            <b>Jan 2023 Update:</b> Almost a year after running the simulation above, much has happened on planet Earth,
+            from wars and destruction to the universal ban on cryptocurrencies in major markets like China and the
+            reordering of the global status quo. Bitcoin is still here, alive but wounded. The r factor of the 2010-2020
+            decade seems to have abandoned it for good, and it is unlikely to reach the simulation's prices. By the end
+            of 2025 and '30, we will be here to observe the current prices, readjust coefficients, and draw our
+            conclusions.
         </p>
         <br>
 
         <p class="post-text">
-            <b>Το παρόν άρθρο σε καμιά περίπτωση δεν αποτελεί επενδυτική συμβουλή οποιασδήποτε αγοράς ή πώλησης
-                κρυπτονομισμάτων ή άλλων περιουσιακών στοιχείων. Είναι αποτέλεσμα επιστημονικής έρευνας και μελέτης. Για
-                την
-                αγορά οποιωνδήποτε περιουσιακών στοιχείων πρέπει να συμβουλεύεστε πιστοποιημένους γι' αυτό
-                επαγγελματίες.</b>
+            <b>It is important to note that this article does not provide investment advice for the purchase or sale of
+                cryptocurrencies or any other assets. It is a result of scientific research and study. For any asset
+                purchase, it is recommended to consult certified professionals.</b>
         </p>
-
-
-
-
 
 
     </div>
