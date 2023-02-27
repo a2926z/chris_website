@@ -602,6 +602,12 @@ img {
     padding-bottom: 1%;
   }
 
+  .iam {
+    width: 70%; 
+    text-align: center; 
+    margin: 0 auto 4%;
+  }
+
   .profile-img {
     width: 40%;
     height: 40%;
