@@ -432,10 +432,16 @@ img {
   padding: 1% 0;
 }
 
-.post-text, .promo-text {
+.post-text {
   margin: auto;
   width: 40%;
   line-height: 34px;
+}
+
+.promo-text {
+  text-align: center; 
+  font-size: 1.7em;
+  margin: auto;
 }
 
 .post-img-top {
@@ -696,8 +702,8 @@ img {
 
   .promo-text {
     text-align: center; 
-    font-size: 1.4em;
-    width: 100%
+    font-size: 1.3em;
+    width: 85%
   }
 
   .post-img-top {
@@ -712,7 +718,7 @@ img {
   }
 
   .promo-img {
-    width: 35% !important;
+    width: 30% !important;
     padding: 4% 0 !important;
   }
 
