@@ -432,7 +432,7 @@ img {
   padding: 1% 0;
 }
 
-.post-text {
+.post-text, .promo-text {
   margin: auto;
   width: 40%;
   line-height: 34px;
@@ -446,7 +446,7 @@ img {
   padding: 1% 0;
 }
 
-.post-img {
+.post-img, .promo-img {
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -694,6 +694,12 @@ img {
     margin-bottom: -2%; */
   }
 
+  .promo-text {
+    text-align: center; 
+    font-size: 1.4em;
+    width: 100%
+  }
+
   .post-img-top {
     width: 85%;
     padding-top: 6%;
@@ -703,6 +709,11 @@ img {
   .post-img {
     width: 85%;
     padding: 4% 0;
+  }
+
+  .promo-img {
+    width: 35% !important;
+    padding: 4% 0 !important;
   }
 
   .post-bottom-container {
